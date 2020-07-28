@@ -236,6 +236,10 @@ html {
 /******************************/
 /* Color Variables            */
 /******************************/
+* {
+  border: 1px solid red;
+}
+
 .wrapper {
   max-width: 1440px;
   width: 95%;

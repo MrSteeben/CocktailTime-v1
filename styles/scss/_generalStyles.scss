@@ -1,5 +1,5 @@
 // DEBUGGING style
-// * {border: 1px solid red;}
+* {border: 1px solid red;}
 
 .wrapper {
     max-width: 1440px;
@@ -39,6 +39,7 @@ body {
     font-family: $bodyFont;
     font-size: 1.8rem;
 }
+
 img {
     max-width: 100%;
     object-fit: cover;
