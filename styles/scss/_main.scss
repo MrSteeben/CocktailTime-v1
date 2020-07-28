@@ -1,27 +1,94 @@
+.mood{
+    background: url(../../assets/part1.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+h2{ 
+    font-size: 5rem;
+    margin: 3rem 0;
+    color: $colorWhite;
+}
+
 .question1 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     
+
     .option1,
     .option2,
     .option3 {
         border-radius: 50%;
-        width: 200px;
-        height: 200px;
+        border: 1rem solid $colorWhite;
+        width: 37rem;
+        height: 37rem;
+        position: relative;
     }
 
     .option1 {
-        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../../assets/party.jpg);
+        background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/party.jpg);
         background-size: cover;
     }
     .option2 {
-        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../../assets/chill.jpg);
+        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/chill.jpg);
         background-size: cover;
     }
 
     .option3 {
-        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../../assets/surprise.jpg);
+        background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/surprise.jpg);
         background-size: cover;
     }
 }
 
+.input1,
+.input2,
+.input3,
+label{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}
+
+label{
+    color: $colorBlack;
+    font-weight: 700;
+}
+
+.category{
+    background: url(../../assets/extra.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.question2{
+    display: flex;
+    justify-content: space-between;
+
+    .category1,
+    .category2,
+    .category3 {
+        border-radius: 50%;
+        border: 1rem solid $colorWhite;
+        width: 37rem;
+        height: 37rem;
+        position: relative;
+    }
+
+    .category1 {
+        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/party.jpg);
+        background-size: cover;
+    }
+    .category2 {
+        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/chill.jpg);
+        background-size: cover;
+    }
+
+    .category3 {
+        background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/surprise.jpg);
+        background-size: cover;
+    }
+}

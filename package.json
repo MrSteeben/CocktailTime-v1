@@ -1,0 +1,25 @@
+{
+  "name": "stephenmcmullinryanshaoprojectfour",
+  "version": "1.0.0",
+  "description": "project4",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass styles/scss/styles.scss styles/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsCocktailTime/stephenMcMullinRyanShaoProjectFour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ItsCocktailTime/stephenMcMullinRyanShaoProjectFour/issues"
+  },
+  "homepage": "https://github.com/ItsCocktailTime/stephenMcMullinRyanShaoProjectFour#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

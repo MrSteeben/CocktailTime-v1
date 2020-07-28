@@ -28,18 +28,23 @@ ul,
 body {
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
 }
 
 h1 {
     font-family: $headerTitleFont;
-    font-size: 6.8rem;
+    font-size: 12rem;
 }
 
 body {
     font-family: $bodyFont;
-    font-size: 1.8rem;
+    font-size: 3rem;
 }
 img {
     max-width: 100%;
     object-fit: cover;
+}
+
+label{
+    font-size: 4rem;
 }
