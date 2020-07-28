@@ -1,0 +1,33 @@
+.wrapper {
+    max-width: 1440px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skipLink:focus {
+    left: 0;
+}
+
+html,
+h1,
+h2,
+p,
+ul,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: $headerTitleFont;
+    font-size: 6.8rem;
+}

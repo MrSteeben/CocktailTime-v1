@@ -212,7 +212,7 @@ html {
           box-sizing: inherit;
 }
 
-.sr-only {
+.srOnly {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -226,14 +226,68 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 /******************************/
 /* Font Variables             */
 /******************************/
 /******************************/
 /* Color Variables            */
 /******************************/
+.wrapper {
+  max-width: 1440px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skipLink:focus {
+  left: 0;
+}
+
+html,
+h1,
+h2,
+p,
+ul,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 6.8rem;
+}
+
 header {
   height: 100vh;
   background: url(../assets/headerHeroImage.jpg);
   background-size: cover;
 }
+
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
