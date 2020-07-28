@@ -277,6 +277,8 @@ body {
 
 img {
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header {
@@ -310,6 +312,41 @@ header .headerFlex p {
 
 header .headerFlex button {
   margin-top: 2rem;
+}
+
+.question1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.question1 .option1,
+.question1 .option2,
+.question1 .option3 {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.question1 .option1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../../assets/party.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/party.jpg);
+  background-size: cover;
+}
+
+.question1 .option2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../../assets/chill.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/chill.jpg);
+  background-size: cover;
+}
+
+.question1 .option3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../../assets/surprise.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/surprise.jpg);
+  background-size: cover;
 }
 
 /*
