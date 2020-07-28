@@ -236,10 +236,6 @@ html {
 /******************************/
 /* Color Variables            */
 /******************************/
-* {
-  border: 1px solid red;
-}
-
 .wrapper {
   max-width: 1440px;
   width: 95%;
@@ -298,10 +294,22 @@ header .headerFlex {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 header .headerFlex h1 {
-  margin: 200px 0 100px 0;
+  margin: 10rem 0 5rem 0;
+  width: 50%;
+}
+
+header .headerFlex p {
+  width: 50%;
+}
+
+header .headerFlex button {
+  margin-top: 2rem;
 }
 
 /*

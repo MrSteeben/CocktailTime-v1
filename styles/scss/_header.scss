@@ -6,9 +6,16 @@ header {
     .headerFlex {
         display: flex;
         flex-direction: column;
-        
+        align-items: flex-start;
         h1 {
-            margin: 200px 0 100px 0;
+            margin: 10rem 0 5rem 0;
+            width: 50%;
+        }
+        p {
+            width: 50%;
+        }
+        button {
+            margin-top: 2rem;
         }
     }
 }
