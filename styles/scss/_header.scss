@@ -1,6 +1,14 @@
 header {
     height: 100vh;
     // Photo by Pixabay from Pexels 
-    background: url(../assets/headerHeroImage.jpg); 
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../assets/headerHeroImage.jpg); 
     background-size: cover;
+    .headerFlex {
+        display: flex;
+        flex-direction: column;
+        
+        h1 {
+            margin: 200px 0 100px 0;
+        }
+    }
 }
