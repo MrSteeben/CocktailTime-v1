@@ -9,7 +9,7 @@
 h2{ 
     font-size: 5rem;
     margin: 3rem 0;
-    color: $colorWhite;
+    color: $colorSecondary;
 }
 
 // .party{
@@ -24,12 +24,11 @@ h2{
     display: flex;
     justify-content: space-between;
     
-    
     .option1,
     .option2,
     .option3 {
         border-radius: 50%;
-        border: 1rem solid $colorWhite;
+        border: 1rem solid $colorSecondary;
         width: 32rem;
         height: 32rem;
         position: relative;
@@ -38,7 +37,7 @@ h2{
     .option1:hover,
     .option2:hover,
     .option3:hover{
-        border: 1rem solid $colorIconHover;
+        border: 1rem solid $colorPrimary;
     }
     
 
@@ -59,7 +58,10 @@ h2{
 
 .input1,
 .input2,
-.input3{
+.input3,
+.cat1,
+.cat2,
+.cat3{
     position: absolute;
     z-index: -100;
     width: 30rem;
@@ -90,23 +92,37 @@ label{
     .category2,
     .category3 {
         border-radius: 50%;
-        border: 1rem solid $colorWhite;
-        width: 37rem;
-        height: 37rem;
+        border: 1rem solid $colorSecondary;
+        width: 32rem;
+        height: 32rem;
         position: relative;
     }
 
+    .category1:hover,
+    .category2:hover,
+    .category3:hover{
+        border: 1rem solid $colorPrimary;
+    }
+
     .category1 {
-        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/party.jpg);
+        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/party.jpg); //ADDED BY JQUERY
         background-size: cover;
     }
     .category2 {
-        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/chill.jpg);
+        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/chill.jpg);//ADDED BY JQUERY
         background-size: cover;
     }
 
     .category3 {
-        background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/surprise.jpg);
+        background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/surprise.jpg);//ADDED BY JQUERY
         background-size: cover;
     }
+}
+
+.results{
+    background: url(../../assets/part3.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

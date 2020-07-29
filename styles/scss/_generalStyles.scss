@@ -47,4 +47,25 @@ img {
 
 label{
     font-size: 4rem;
+    color: $colorPrimary;
+}
+
+.start,
+.restart{
+    display:inline-block;
+    padding: 2rem 6rem;
+    border-radius: 0.3rem;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight: 500;
+    color: $colorWhite;
+    transition: all 0.2s;
+    background-color: $colorPrimary;
+    text-transform: uppercase;
+}
+
+.start:hover,
+.restart:hover{
+    color: $colorBlack;
+    background-color: $colorSecondary;
 }
