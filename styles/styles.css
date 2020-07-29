@@ -347,55 +347,47 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.question1 .option1,
-.question1 .option2,
-.question1 .option3 {
-  border-radius: 50%;
-  border: 1rem solid #fff;
-  width: 37rem;
-  height: 37rem;
-  position: relative;
-}
-
-.question1 .option1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../../assets/party.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/party.jpg);
-  background-size: cover;
-}
-
-.question1 .option2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../../assets/chill.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/chill.jpg);
-  background-size: cover;
-}
-
-.question1 .option3 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../../assets/surprise.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/surprise.jpg);
-  background-size: cover;
-}
+  justify-content: space-between; }
+  .question1 .option1,
+  .question1 .option2,
+  .question1 .option3 {
+    border-radius: 50%;
+    border: 1rem solid #fff;
+    width: 32rem;
+    height: 32rem;
+    position: relative; }
+  .question1 .option1:hover,
+  .question1 .option2:hover,
+  .question1 .option3:hover {
+    border: 1rem solid #52483c; }
+  .question1 .option1 {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/party.jpg);
+    background-size: cover; }
+  .question1 .option2 {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/chill.jpg);
+    background-size: cover; }
+  .question1 .option3 {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/surprise.jpg);
+    background-size: cover; }
 
 .input1,
 .input2,
-.input3,
-label {
+.input3 {
   position: absolute;
-  top: 50%;
-  right: 50%;
-}
+  z-index: -100;
+  width: 30rem;
+  height: 30rem; }
+
 
 label {
   color: #000;
   font-weight: 700;
-}
+  position: absolute;
+  top: 45%;
+  right: 30%; }
 
 .category {
-  background: url(../../assets/extra.jpg);
+  background: url(../../assets/part2.jpg);
   height: 100vh;
   background-size: cover;
   display: -webkit-box;
