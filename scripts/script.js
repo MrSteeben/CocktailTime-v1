@@ -6,15 +6,21 @@
 // pass the variable to a getDrinks function 
 // in function getDrinks, call the api and pass in the data of the users sub-category selection
 
-const cocktailApp = {}
+const cocktailApp = {
+    party :[ 
+        milk = {
+            idDrink
+        }
+        
+        float: [
+
+        ]
+    ]
+}
 
 const drinkCategory = {
     party: ['shot', 'milk%20/%20float%20/%20shake', 'punch%20/%20party%20drink'],
     chill: ['cocktail', 'beer', 'coffee%20/%20cocoa']
-}
-
-cocktailApp.init = function (){
-
 }
 
 // function ready
@@ -23,3 +29,8 @@ $(function() {
     cocktailApp.init();
     
 })
+
+cocktailApp.init = function (){
+
+}
+
