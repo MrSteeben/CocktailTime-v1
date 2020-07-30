@@ -8,11 +8,95 @@
 
 const cocktailApp = {};
 
-const drinkCategory = {
-    party: ['shot', 'milk / float / shake', 'punch / party drink'],
-    chill: ['cocktail', 'beer', 'coffee / cocoa'],
-    random: ['']
+cocktailApp.party = {
+    shot: [
+        {
+            title: 'shot',
+            imageURL: 'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/shots.jpg);'
+        }
+    ],
+    punch: [
+        {
+            title: 'punch / party drink',
+            imageUrl: "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/punch.jpg);"
+        }
+    ],
+    float: [
+      {
+        title: 'float',
+        imageURL: 'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/float.jpg);'
+      }
+    ],
+    chill: [
+        {
+            title: 'cocktail', 
+            imageURL: "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/cocktail.jpg);",
+        },
+        {
+            title: 'beer',
+            imageURL: "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/beer.jpg);",
+        },
+        {
+            title: 'coffee / cocoa',
+            imageURL: "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/coffee.jpg);",
+        }
+    ],
+
+    random: [
+        {
+            key: "",
+        }
+    ],
 }
+
+//DISPLAY SUBCATEGORY BASED OFF OF USER CATEGORY SELECTION
+//DOC READY FUNCTION
+$(function() {
+    function randomItem(optionsArray) {
+		const index = Math.floor(Math.random() * optionsArray.length);
+		return optionsArray[index];
+    }
+
+     //Force scroll position to top at page refresh
+    $('html, body').animate({scrollTop: 0}, 100);
+
+    //Slow scroll from start to first slide
+    $('.start').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $(".questions").offset().top
+        }, 
+        'slow'
+        );
+    });
+
+    //USER CLICKS READY
+    cocktailApp.getSelection = function(){
+    $('.form').on('start', function(event){
+        event.preventDefault();
+        //Figure out which category user chooses
+        const mood = $('input[name=mood]:checked').val();
+        console.log(mood);
+        const userMood = cocktailApp.party[mood];
+
+        //Dependent on category chosen, display images on subcategories
+        if (userMood === 'party'){
+            $(".category1").css("background", userMood[party].imageURL) && 
+            $(".category2").css("background", userMood[party].imageURL) && 
+            $(".category3").css("background", userMood[party].imageURL)
+        } else if (userMood === 'chill'){
+            $(".category1").css("background", userMood[chill].imageURL) && 
+            $(".category2").css("background", userMood[chill].imageURL) && 
+            $(".category3").css("background", userMood[chill].imageURL)
+        } else if (userMood === 'surprise'){
+            $('html, body').animate({
+                scrollBot: $("footer").offset().top
+            }, 
+            'slow');
+        }
+    })
+};   
+    cocktailApp.init();
+})
 
 cocktailApp.getDrinks = function() {
         
@@ -62,7 +146,11 @@ cocktailApp.showResults = function(drink) {
     })
 }
 
-$(function() {
-    cocktailApp.getDrinks();
 
-})
+
+cocktailApp.init = function (){
+    cocktailApp.getSelection();
+    cocktailApp.getDrinks();
+}
+
+
