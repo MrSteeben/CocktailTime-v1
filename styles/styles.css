@@ -340,13 +340,10 @@ label {
   .question2 .category3:hover {
     border: 1rem solid #352919; }
   .question2 .category1 {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/party.jpg);
     background-size: cover; }
   .question2 .category2 {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/chill.jpg);
     background-size: cover; }
   .question2 .category3 {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/surprise.jpg);
     background-size: cover; }
 
 .results {
