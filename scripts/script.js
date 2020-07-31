@@ -105,7 +105,7 @@ cocktailApp.getDrinks = function() {
         method: 'GET',
         dataType: 'json',
         data: {
-            c: 'milk / float / shake'
+            i: 'vodka'
         }
     }).then((result) => {
 
