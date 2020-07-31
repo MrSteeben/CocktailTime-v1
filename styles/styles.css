@@ -274,77 +274,48 @@ h2 {
   margin: 3rem 0;
   color: #FFF7E8; }
 
-.question1 {
+.options {
   display: flex;
+  flex: 1 0 auto;
+  flex-wrap: wrap;
   justify-content: space-between; }
-  .question1 .option1,
-  .question1 .option2,
-  .question1 .option3 {
+
+.option1,
+.option2,
+.option3,
+.option4,
+.option5,
+.option6 {
+  list-style: none; }
+  .option1 p,
+  .option2 p,
+  .option3 p,
+  .option4 p,
+  .option5 p,
+  .option6 p {
+    text-align: center;
+    color: #FFF7E8;
+    background: #BF8620;
+    margin: 2rem 0; }
+  .option1 img,
+  .option2 img,
+  .option3 img,
+  .option4 img,
+  .option5 img,
+  .option6 img {
     border-radius: 50%;
-    border: 1rem solid #FFF7E8;
+    border: 1rem solid #BF8620;
     width: 32rem;
     height: 32rem;
-    position: relative; }
-  .question1 .option1:hover,
-  .question1 .option2:hover,
-  .question1 .option3:hover {
-    border: 1rem solid #352919; }
-  .question1 .option1 {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/party.jpg);
-    background-size: cover; }
-  .question1 .option2 {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/chill.jpg);
-    background-size: cover; }
-  .question1 .option3 {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../assets/surprise.jpg);
-    background-size: cover; }
-
-.input1,
-.input2,
-.input3,
-.cat1,
-.cat2,
-.cat3 {
-  position: absolute;
-  z-index: -100;
-  width: 30rem;
-  height: 30rem; }
-
-label {
-  color: #000;
-  font-weight: 700;
-  position: absolute;
-  top: 45%;
-  right: 30%; }
-
-.category {
-  background: url(../../assets/part2.jpg);
-  height: 100vh;
-  background-size: cover;
-  display: flex;
-  align-items: center; }
-
-.question2 {
-  display: flex;
-  justify-content: space-between; }
-  .question2 .category1,
-  .question2 .category2,
-  .question2 .category3 {
-    border-radius: 50%;
-    border: 1rem solid #FFF7E8;
-    width: 32rem;
-    height: 32rem;
-    position: relative; }
-  .question2 .category1:hover,
-  .question2 .category2:hover,
-  .question2 .category3:hover {
-    border: 1rem solid #352919; }
-  .question2 .category1 {
-    background-size: cover; }
-  .question2 .category2 {
-    background-size: cover; }
-  .question2 .category3 {
-    background-size: cover; }
+    object-fit: contain;
+    background-color: #fff; }
+    .option1 img:hover,
+    .option2 img:hover,
+    .option3 img:hover,
+    .option4 img:hover,
+    .option5 img:hover,
+    .option6 img:hover {
+      border: 1rem solid #224742; }
 
 .results {
   background: url(../../assets/part3.jpg);
