@@ -16,7 +16,7 @@ h2{
     display: flex;
     flex: 1 0 auto;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .option1,
@@ -34,13 +34,14 @@ h2{
         color: $colorSecondary;
         background: $colorTertiary;
         margin: 2rem 0;
+        border-radius: 10px;
     }
 
     img{
         border-radius: 50%;
         border: 1rem solid $colorTertiary;
-        width: 32rem;
-        height: 32rem;
+        width: 35rem;
+        height: 35rem;
         object-fit: contain;
         background-color: $colorWhite;
             &:hover{

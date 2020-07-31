@@ -25,6 +25,7 @@ $(function() {
     cocktailApp.init();
 })
 
+//Determine user input
 cocktailApp.eventListener = function() {
 
     cocktailApp.$li.on('click', function(e){
@@ -52,10 +53,10 @@ cocktailApp.getDrinks = function(selectedDrink) {
         data: {
             i: selectedDrink
         }
-    }).then((result) => {
+    }).then((res) => {
 
-        // pass the results from the AJAX call to the showResults() function to output the drinks Name and Photograph
-        cocktailApp.showResults(result);
+        // pass the res from the AJAX call to the showResults() function to output the drinks Name and Photograph
+        cocktailApp.showResults(res);
 
     })
 }
@@ -70,10 +71,10 @@ cocktailApp.getDrinkInstructions = function(drinkId) {
         data: {
             i: drinkId
         }
-    }).then((result) => {
-        // Pass the results of the AJAX call as a parameter to the instruction() function to extract the
+    }).then((res) => {
+        // Pass the res of the AJAX call as a parameter to the instruction() function to extract the
         // Ingredients and Measurements and Mixing instructions for each drink
-        cocktailApp.instruction(result);
+        cocktailApp.instruction(res);
     })
 }
 
@@ -81,20 +82,31 @@ cocktailApp.getDrinkInstructions = function(drinkId) {
 cocktailApp.instruction = function(instructions) {
 
     // Empty array that should hold the drink measurements (NOT SURE IF WE NEED THIS)
-    const measurements = [];
-
-    // Empty array that should hold the drink ingredients (NOT SURE IF WE NEED THIS)
+    const measures = [];
     const ingredients = [];
 
     // loop through the drinkId array and extract the drink instructions, and eventually append to results
     // container
     Object.keys(instructions).forEach(function(items) {
         const drinkInfo = instructions[items];
+        console.log(drinkInfo);
 
         // store the instructions for the drink into a variable.  This information is stored at the FIRST array index[0]
         const drinkInstructions = drinkInfo[0].strInstructions;
-        console.log(drinkInstructions);
-        // console.log(drinkInfo[0].strIngredient1);
+        // console.log(drinkInstructions);
+
+        const drinkIngredients = drinkInfo[0].strIngredient;
+        const drinkMeasures = drinkInfo[0].drinkMeasure;
+
+        for (let i = 1; i < 16; i++){
+            while (drinkIngredients[i] != null){
+                ingredients.push(drinkIngredients[i]);
+                measures.push(drinkMeasure[i]);
+            };
+        }
+        console.log(ingredients);
+    });
+}
 
 
         // MY THINKING BEHIND THIS PART:
@@ -113,10 +125,7 @@ cocktailApp.instruction = function(instructions) {
         //     if (drinkInfo[0].strIngredient[i] != null) {
         //         measurements.push(drinkInfo[0].strIngredient[i]);
         //     } 
-        // }
-    })
-
-}
+        //
 cocktailApp.showResults = function(drink) {
     // console.log(drink);
 
