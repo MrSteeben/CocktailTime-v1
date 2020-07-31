@@ -8,46 +8,21 @@
 
 const cocktailApp = {};
 
-cocktailApp.party = {
-    shot: [
-        {
-            title: 'shot',
-            imageURL: 'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/shots.jpg);'
-        }
-    ],
-    punch: [
-        {
-            title: 'punch / party drink',
-            imageUrl: "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/punch.jpg);"
-        }
-    ],
-    float: [
-      {
-        title: 'float',
-        imageURL: 'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/float.jpg);'
-      }
-    ],
-    chill: [
-        {
-            title: 'cocktail', 
-            imageURL: "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/cocktail.jpg);",
-        },
-        {
-            title: 'beer',
-            imageURL: "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/beer.jpg);",
-        },
-        {
-            title: 'coffee / cocoa',
-            imageURL: "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/coffee.jpg);",
-        }
-    ],
+cocktailApp.party = [
+    {
+        title: 'nameOfDrink',
+        type: 'shot',
+        imageURL: "",
+    },
+    {
 
-    random: [
-        {
-            key: "",
-        }
-    ],
-}
+    }
+]
+    // cocktailApp.random: [
+    //     {
+    //         key: "",
+    //     }
+    // ]
 
 //DISPLAY SUBCATEGORY BASED OFF OF USER CATEGORY SELECTION
 //DOC READY FUNCTION
@@ -75,8 +50,7 @@ $(function() {
         event.preventDefault();
         //Figure out which category user chooses
         const mood = $('input[name=mood]:checked').val();
-        console.log(mood);
-        const userMood = cocktailApp.party[mood];
+        const userMood = cocktailApp.mood;
 
         //Dependent on category chosen, display images on subcategories
         if (userMood === 'party'){

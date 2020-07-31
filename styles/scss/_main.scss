@@ -12,112 +12,47 @@ h2{
     color: $colorSecondary;
 }
 
-// .party{
-//     border-radius: 50%;
-//     border: 1rem solid $colorWhite;
-//     width: 37rem;
-//     height: 37rem;
-//     position: relative;
-//     background-size: cover;
-// }
-.question1 {
+.options{
     display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
     justify-content: space-between;
-    
-    .option1,
-    .option2,
-    .option3 {
-        border-radius: 50%;
-        border: 1rem solid $colorSecondary;
-        width: 32rem;
-        height: 32rem;
-        position: relative;
-    }
+}
 
-    .option1:hover,
-    .option2:hover,
-    .option3:hover{
-        border: 1rem solid $colorPrimary;
-    }
+.option1,
+.option2,
+.option3,
+.option4,
+.option5,
+.option6{
+
+    list-style: none;
     
 
-    .option1 {
-        background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/party.jpg);
-        background-size: cover;
-    }
-    .option2 {
-        background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/chill.jpg);
-        background-size: cover;
+    p {
+        text-align: center;
+        color: $colorSecondary;
+        background: $colorTertiary;
+        margin: 2rem 0;
     }
 
-    .option3 {
-        background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/surprise.jpg);
-        background-size: cover;
-    }
-}
-
-.input1,
-.input2,
-.input3,
-.cat1,
-.cat2,
-.cat3{
-    position: absolute;
-    z-index: -100;
-    width: 30rem;
-    height: 30rem;
-}
-
-label{
-    color: $colorBlack;
-    font-weight: 700;
-    position: absolute;
-    top: 45%;
-    right: 30%;
-}
-
-.category{
-    background: url(../../assets/part2.jpg);
-    height: 100vh;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-}
-
-.question2{
-    display: flex;
-    justify-content: space-between;
-
-    .category1,
-    .category2,
-    .category3 {
+    img{
         border-radius: 50%;
-        border: 1rem solid $colorSecondary;
+        border: 1rem solid $colorTertiary;
         width: 32rem;
         height: 32rem;
-        position: relative;
-    }
-
-    .category1:hover,
-    .category2:hover,
-    .category3:hover{
-        border: 1rem solid $colorPrimary;
-    }
-
-    .category1 {
-        // background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/party.jpg); //ADDED BY JQUERY
-        background-size: cover;
-    }
-    .category2 {
-        // background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/chill.jpg);//ADDED BY JQUERY
-        background-size: cover;
-    }
-
-    .category3 {
-        // background:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(../../assets/surprise.jpg);//ADDED BY JQUERY
-        background-size: cover;
+        object-fit: contain;
+        background-color: $colorWhite;
+            &:hover{
+            border: 1rem solid $colorGreen;
+        }
     }
 }
+
+
+
+
+
 
 .results{
     background: url(../../assets/part3.jpg);
@@ -126,3 +61,4 @@ label{
     background-size: cover;
     background-position: center;
 }
+
