@@ -7,30 +7,15 @@
 // in function getDrinks, call the api and pass in the data of the users sub-category selection
 
 const cocktailApp = {};
+const drinkKeyUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php';
+const instructionsKey = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php';
 
-cocktailApp.party = [
-    {
-        title: 'nameOfDrink',
-        type: 'shot',
-        imageURL: "",
-    },
-    {
+cocktailApp.$li = $('li');
 
-    }
-]
-    // cocktailApp.random: [
-    //     {
-    //         key: "",
-    //     }
-    // ]
 
-//DISPLAY SUBCATEGORY BASED OFF OF USER CATEGORY SELECTION
 //DOC READY FUNCTION
 $(function() {
-    function randomItem(optionsArray) {
-		const index = Math.floor(Math.random() * optionsArray.length);
-		return optionsArray[index];
-    }
+
 
      //Force scroll position to top at page refresh
     $('html, body').animate({scrollTop: 0}, 100);
@@ -44,42 +29,31 @@ $(function() {
         );
     });
 
-    //USER CLICKS READY
-    cocktailApp.getSelection = function(){
-    $('.form').on('start', function(event){
-        event.preventDefault();
-        //Figure out which category user chooses
-        const mood = $('input[name=mood]:checked').val();
-        const userMood = cocktailApp.mood;
 
-        //Dependent on category chosen, display images on subcategories
-        if (userMood === 'party'){
-            $(".category1").css("background", userMood[party].imageURL) && 
-            $(".category2").css("background", userMood[party].imageURL) && 
-            $(".category3").css("background", userMood[party].imageURL)
-        } else if (userMood === 'chill'){
-            $(".category1").css("background", userMood[chill].imageURL) && 
-            $(".category2").css("background", userMood[chill].imageURL) && 
-            $(".category3").css("background", userMood[chill].imageURL)
-        } else if (userMood === 'surprise'){
-            $('html, body').animate({
-                scrollBot: $("footer").offset().top
-            }, 
-            'slow');
-        }
-    })
-};   
     cocktailApp.init();
 })
 
-cocktailApp.getDrinks = function() {
+cocktailApp.eventListener = function() {
+
+    cocktailApp.$li.on('click', function(e){
+        e.preventDefault();  
+
+        let selectedDrink = $(this).attr('id');
+        
+        console.log(selectedDrink);
+        // const selectedDrink = vodka;
+        cocktailApp.getDrinks(drinkKeyUrl, selectedDrink);
+    })
+
+}
+cocktailApp.getDrinks = function(drinksUrl, selectedDrink) {
         
     $.ajax({
-        url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php',
+        url: drinksUrl,
         method: 'GET',
         dataType: 'json',
         data: {
-            i: 'vodka'
+            i: selectedDrink
         }
     }).then((result) => {
 
@@ -88,14 +62,39 @@ cocktailApp.getDrinks = function() {
     })
 }
 
+cocktailApp.getDrinkInstructions = function(drinkId) {
+
+    $.ajax({
+        url: 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            i: drinkId
+        }
+    }).then((result) => {
+        cocktailApp.instruction(result);
+    })
+}
+
+// get the drink mixing ingredients and instructions
+cocktailApp.instruction = function(instructions) {
+
+    Object.keys(instructions).forEach(function(items) {
+        const drinkInfo = instructions[items];
+
+        const drinkInstructions = drinkInfo[0].strInstructions;
+        console.log(drinkInstructions);
+
+        
+    })
+
+}
 cocktailApp.showResults = function(drink) {
     // console.log(drink);
 
     // loop through the an array of objects for random cocktails
     Object.keys(drink).forEach(function(items) {
         const showDrinks = drink[items];
-
-        // console.log(showDrinks[2]);
 
         // loop 3 times to generate 3 random drinks and output to results container, for more images, increase i < 3 condition
         for (i = 0; i < 3; i++) {
@@ -113,17 +112,23 @@ cocktailApp.showResults = function(drink) {
             const drinkImageUrl = showDrinks[randomItem].strDrinkThumb;
             console.log(drinkImageUrl);
 
+            const drinkId = showDrinks[randomItem].idDrink;
+            console.log(drinkId);
+
+            cocktailApp.getDrinkInstructions(drinkId);
+
             // display the entire object
             // console.log(showDrinks[randomItem]);
 
         }
+
     })
 }
 
 
-
 cocktailApp.init = function (){
-    cocktailApp.getSelection();
+
+    cocktailApp.eventListener();
     cocktailApp.getDrinks();
 }
 
