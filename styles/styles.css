@@ -288,8 +288,7 @@ label {
 }
 
 .start,
-.restart,
-.another {
+.restart {
   display: inline-block;
   padding: 2rem 6rem;
   border-radius: 0.3rem;
@@ -305,8 +304,7 @@ label {
 }
 
 .start:hover,
-.restart:hover,
-.another:hover {
+.restart:hover {
   color: #000;
   background-color: #FFF7E8;
 }
@@ -357,10 +355,15 @@ header .headerFlex button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+=======
+  align-items: center;
+  text-align: center; }
+>>>>>>> 6b9448770159375e729c0720978e5f8f59751311
 
 h2 {
   font-size: 5rem;
@@ -444,11 +447,12 @@ h2 {
 }
 
 .results {
-  background: url(../../assets/part3.jpg);
+  background: url(../../assets/extra.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+<<<<<<< HEAD
 }
 
 .results h2 {
@@ -456,6 +460,13 @@ h2 {
   padding: 3rem 0;
   color: #FFF7E8;
 }
+=======
+  text-align: center; }
+  .results h2 {
+    font-size: 5rem;
+    padding: 3rem 0;
+    color: #FFF7E8; }
+>>>>>>> 6b9448770159375e729c0720978e5f8f59751311
 
 .cocktailContainer {
   display: -webkit-box;

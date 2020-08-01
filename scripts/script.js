@@ -9,10 +9,6 @@ cocktailApp.$li = $('li');
 //DOC READY FUNCTION
 $(function() {
 
-
-     //Force scroll position to top at page refresh
-    $('html, body').animate({scrollTop: 0}, 100);
-
     //Slow scroll from start to first slide
     $('.start').on('click', function() {
         $('html, body').animate({
@@ -21,8 +17,6 @@ $(function() {
         'slow'
         );
     });
-
-
     cocktailApp.init();
 })
 
@@ -40,10 +34,17 @@ cocktailApp.eventListener = function() {
 
         // Pass the user's clicked selection as a parameter to the function getDrinks()
         cocktailApp.getDrinks(selectedDrink);
+
+        cocktailApp.$li.off();
+
+        $('html, body').animate({
+            scrollTop: $(".results").offset().top
+        }, 
+        'slow'
+        );
     })
 
 }
-
 
 
 // Receive the user's selected drink as a parameter and pass this value as data to our AJAX call
@@ -70,7 +71,7 @@ cocktailApp.tryAgainListener = function(){
 
     $('.restart').on('click', function(){
         location.reload(true);
-        $('html').scrollTop(0);
+        $('html, body').animate({scrollTop: 0}, 100);
     });
 }
 
@@ -93,7 +94,6 @@ cocktailApp.showResults = function(category) {
     $('.cocktailImgContainer').append(`<img class="cocktailImg" src=${randomDrinkImageUrl}>`)
 
     cocktailApp.tryAgainListener();
-   
     console.log(category.drinks[randomItem]);
 }
 
@@ -145,7 +145,6 @@ cocktailApp.instruction = function(instructions) {
     measures.forEach(function(items){
         $('.cocktailMeasures').append(`<li class="measure">${items}</li>`);
     })
-
 }
 
 
