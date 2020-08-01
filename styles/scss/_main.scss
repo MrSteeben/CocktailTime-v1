@@ -14,7 +14,7 @@ h2{
 
 .options{
     display: flex;
-    flex: 1 0 auto;
+    flex: 1 1 300px;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
@@ -50,7 +50,7 @@ h2{
         height: 35rem;
         object-fit: contain;
         background-color: $colorWhite;
-            &:hover{
+            &:hover, &:focus{
             border: 1rem solid $colorGreen;
         }
     }
@@ -79,6 +79,7 @@ h2{
     width: 35rem;
     height: 35rem;
     margin: 3rem;
+    
 }
 
 .cocktailImg{
