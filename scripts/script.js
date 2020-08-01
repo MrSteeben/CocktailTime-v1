@@ -40,7 +40,7 @@ cocktailApp.eventListener = function() {
         // Pass the user's clicked selection as a parameter to the function getDrinks()
         cocktailApp.getDrinks(selectedDrink);
 
-        cocktailApp.$li.off('click');
+        // cocktailApp.$li.off('click');
     })
 
 }
@@ -149,7 +149,7 @@ cocktailApp.init = function (){
 
     cocktailApp.eventListener();
     cocktailApp.getDrinks();
-    cocktailApp.tryAgainListener();
+    // cocktailApp.tryAgainListener();
 }
 
 
