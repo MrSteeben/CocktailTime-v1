@@ -61,6 +61,28 @@ cocktailApp.getDrinks = function(selectedDrink) {
     })
 }
 
+//Retrieve user selection
+
+cocktailApp.showResults = function(category) {
+    //randomize a drink with index number 
+    const randomItem = Math.floor(Math.random() * (category.drinks).length);
+
+    //randomize a drink given random number
+    const randomDrink = category.drinks[randomItem].strDrink;
+
+    //obtain randomized drink image URL
+    const randomDrinkImageUrl = category.drinks[randomItem].strDrinkThumb;
+
+    //obtain randomized drink ID
+    const randomDrinkId = category.drinks[randomItem].idDrink;
+
+    cocktailApp.getDrinkInstructions(randomDrinkId);
+
+    $('.cocktailContainer').append(`<img class="cocktailImg" src=${randomDrinkImageUrl}>`)
+
+    console.log(category.drinks[randomItem]);
+}
+
 // Receive the drink ID value for each drink generated and pass the id as data to the AJAX call
 cocktailApp.getDrinkInstructions = function(randomDrinkId) {
 
@@ -94,9 +116,6 @@ cocktailApp.instruction = function(instructions) {
             ingredients.push(specificIngredient);
         }
     }
-
-    console.log(ingredients);
-
     //Create an array of all measurements (excluding null values)
     for(let i = 1; i < 16; i++){
         const measureName = `strMeasure${i}`;
@@ -106,38 +125,12 @@ cocktailApp.instruction = function(instructions) {
         }
     }
 
-    console.log(measures);
-
-
     ingredients.forEach(function(items){
-        $('.cocktailContainer').append(`<li>${items}</li>`);
+        $('.cocktailIngredients').append(`<li class="ingredients">${items}</li>`);
     })
-}
-
-cocktailApp.showResults = function(category) {
-    console.log(category);
-
-    for(let i = 0; i < 3; i++){
-        //randomize a drink with index number 
-        const randomItem = Math.floor(Math.random() * (category.drinks).length);
-        console.log(randomItem);
-
-        //randomize a drink given random number
-        const randomDrink = category.drinks[randomItem].strDrink;
-        console.log(randomDrink);
-
-        //obtain randomized drink image URL
-        const randomDrinkImageUrl = category.drinks[randomItem].strDrinkThumb;
-        console.log(randomDrinkImageUrl);
-
-        //obtain randomized drink ID
-        const randomDrinkId = category.drinks[randomItem].idDrink;
-        console.log(randomDrinkId);
-
-        cocktailApp.getDrinkInstructions(randomDrinkId);
-
-        console.log(category.drinks[randomItem]);
-    }
+    measures.forEach(function(items){
+        $('.cocktailIngredients').append(`<li class="measure">${items}</li>`);
+    })
 
 }
 

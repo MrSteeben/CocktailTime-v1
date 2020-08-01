@@ -227,7 +227,8 @@ label {
   color: #352919; }
 
 .start,
-.restart {
+.restart,
+.another {
   display: inline-block;
   padding: 2rem 6rem;
   border-radius: 0.3rem;
@@ -240,7 +241,8 @@ label {
   text-transform: uppercase; }
 
 .start:hover,
-.restart:hover {
+.restart:hover,
+.another:hover {
   color: #000;
   background-color: #FFF7E8; }
 
@@ -297,7 +299,15 @@ h2 {
     color: #FFF7E8;
     background: #BF8620;
     margin: 2rem 0;
-    border-radius: 10px; }
+    border-radius: 10px;
+    border: 0.5rem solid #BF8620; }
+    .option1 p:hover,
+    .option2 p:hover,
+    .option3 p:hover,
+    .option4 p:hover,
+    .option5 p:hover,
+    .option6 p:hover {
+      border: 0.5rem solid #224742; }
   .option1 img,
   .option2 img,
   .option3 img,
@@ -328,6 +338,23 @@ h2 {
     font-size: 5rem;
     padding: 3rem 0;
     color: #FFF7E8; }
+
+.cocktailContainer {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5)); }
+
+.cocktailIngredients {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  order: 2;
+  list-style: none; }
+
+.ingredients,
+.measure {
+  color: #FFF7E8;
+  font-size: 3rem;
+  line-height: 3rem; }
 
 footer p {
   background: #000;
