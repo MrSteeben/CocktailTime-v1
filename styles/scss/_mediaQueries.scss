@@ -5,10 +5,9 @@
     h2 {
         font-size: 4rem;
     }
-    h3 {
-        font-size: 2.5rem;
-    }
-    body {
+    h3,
+    body,
+    p {
         font-size: 2.5rem;
     }
 
@@ -20,6 +19,11 @@
     .start,
     .restart {
         padding: 1.5rem 4rem;
+    }
+
+    .cocktailImgContainer {
+        width: 30rem;
+        height: 30rem;
     }
 
     .cocktailImg {
@@ -54,18 +58,14 @@
     h2 {
         font-size: 3rem;
     }
-    h3 {
-        font-size: 2rem;
-    }
-    body {
-        font-size: 2rem;
-    }
-
+    h3,
+    body,
+    p,
     .ingredients,
-    .measure {
+    .measure{
         font-size: 2rem;
     }
-
+    
     .option1,
     .option2,
     .option3,

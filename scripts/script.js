@@ -89,9 +89,16 @@ cocktailApp.showResults = function(category) {
     //obtain randomized drink ID
     const randomDrinkId = category.drinks[randomItem].idDrink;
 
+    //obtain randomized drink name
+    const randomDrinkName = category.drinks[randomItem].strDrink;
+
+    console.log(randomDrinkName);
+
     cocktailApp.getDrinkInstructions(randomDrinkId);
 
+
     $('.cocktailImgContainer').append(`<img class="cocktailImg" src=${randomDrinkImageUrl}>`)
+    $('.cocktailImgContainer').append(`<span class="cocktailImg">${randomDrinkName}</span>`)
 
     cocktailApp.tryAgainListener();
     console.log(category.drinks[randomItem]);
@@ -124,6 +131,7 @@ cocktailApp.guideline = function(guide) {
     const ingredients = [];
     //Variable that holds the drink instructions
     const instructions = guide.drinks[0].strInstructions;
+    
 
     console.log(instructions);
     //Create an array of all ingredients (excluding null values)
@@ -150,7 +158,7 @@ cocktailApp.guideline = function(guide) {
         $('.cocktailMeasures').append(`<li class="measure">${items}</li>`);
     })
 
-    $('.cocktailInstructions').append(`<li class="instructions">${instructions}</li>`)
+    $('.resultContainer').append(`<span class="instructions">Instructions: ${instructions}</span>`)
 }
 
 
