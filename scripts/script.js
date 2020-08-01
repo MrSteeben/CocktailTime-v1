@@ -1,3 +1,4 @@
+
 // create namespace
 const cocktailApp = {};
 
