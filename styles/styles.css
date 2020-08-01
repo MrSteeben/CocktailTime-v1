@@ -271,6 +271,10 @@ h1 {
   font-size: 12rem;
 }
 
+h3 {
+  margin-right: 20px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
@@ -285,6 +289,10 @@ img {
 label {
   font-size: 4rem;
   color: #352919;
+}
+
+button {
+  margin-top: 3rem;
 }
 
 .start,
@@ -337,6 +345,7 @@ header .headerFlex {
 
 header .headerFlex h1 {
   margin: 10rem 0 5rem 0;
+  width: 70%;
 }
 
 header .headerFlex p {
@@ -344,26 +353,17 @@ header .headerFlex p {
   margin-bottom: 3rem;
 }
 
-header .headerFlex button {
-  margin-top: 2rem;
-}
-
 .mood {
   background: url(../../assets/part1.jpg);
-  height: 100vh;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
-=======
-  align-items: center;
-  text-align: center; }
->>>>>>> 6b9448770159375e729c0720978e5f8f59751311
 
 h2 {
   font-size: 5rem;
@@ -375,9 +375,6 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
@@ -392,6 +389,7 @@ h2 {
 .option5,
 .option6 {
   list-style: none;
+  margin-right: 2rem;
 }
 
 .option1 p,
@@ -425,8 +423,8 @@ h2 {
 .option6 img {
   border-radius: 50%;
   border: 1rem solid #BF8620;
-  width: 35rem;
-  height: 35rem;
+  width: 25rem;
+  height: 25rem;
   -o-object-fit: contain;
      object-fit: contain;
   background-color: #fff;
@@ -452,21 +450,13 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-<<<<<<< HEAD
+  text-align: center;
 }
 
 .results h2 {
-  font-size: 5rem;
   padding: 3rem 0;
   color: #FFF7E8;
 }
-=======
-  text-align: center; }
-  .results h2 {
-    font-size: 5rem;
-    padding: 3rem 0;
-    color: #FFF7E8; }
->>>>>>> 6b9448770159375e729c0720978e5f8f59751311
 
 .cocktailContainer {
   display: -webkit-box;
@@ -524,4 +514,132 @@ footer p {
   padding: 2rem 0;
   color: #fff;
   text-align: center;
+}
+
+@media (max-width: 1300px) {
+  h1 {
+    font-size: 10rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  body {
+    font-size: 2.5rem;
+  }
+  .ingredients,
+  .measure {
+    font-size: 2.5rem;
+  }
+  .start,
+  .restart {
+    padding: 1.5rem 4rem;
+  }
+  .cocktailImg {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
+@media (max-width: 1055px) {
+  .option1 img,
+  .option2 img,
+  .option3 img,
+  .option4 img,
+  .option5 img,
+  .option6 img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .cocktailImg {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 7.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 2rem;
+  }
+  .ingredients,
+  .measure {
+    font-size: 2rem;
+  }
+  .option1 img,
+  .option2 img,
+  .option3 img,
+  .option4 img,
+  .option5 img,
+  .option6 img {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .mood {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mood ul.options {
+    display: block;
+    width: 20rem;
+    margin: auto auto;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 1.8rem;
+  }
+  .ingredients,
+  .measure {
+    font-size: 2rem;
+  }
+  .option1 img,
+  .option2 img,
+  .option3 img,
+  .option4 img,
+  .option5 img,
+  .option6 img {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  body {
+    font-size: 1.5rem;
+  }
+  .ingredients,
+  .measure {
+    font-size: 1.5rem;
+  }
 }
