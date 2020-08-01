@@ -72,21 +72,39 @@ h2{
 
 .cocktailContainer{
     display: flex;
-    background: linear-gradient(rgba(0,0,0), rgba(0,0,0, 0.5));
+    background: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0, 0.5));
 }
 
-.cocktailIngredients{
+.cocktailImgContainer{
+    width: 35rem;
+    height: 35rem;
+    margin: 3rem;
+}
+
+.cocktailImg{
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+
+}
+
+.cocktailIngredients,
+.cocktailMeasures{
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
-    order: 2;
     list-style: none;
-}
-
-.ingredients,
-.measure{
     color: $colorSecondary;
     font-size: 3rem;
     line-height: 3rem;
 }
+
+.cocktailIngredients{
+    order: 2;
+}
+
+.cocktailMeasures{
+    order: 3;
+}
+
 

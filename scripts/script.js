@@ -43,6 +43,8 @@ cocktailApp.eventListener = function() {
 
 }
 
+
+
 // Receive the user's selected drink as a parameter and pass this value as data to our AJAX call
 cocktailApp.getDrinks = function(selectedDrink) {
         
@@ -63,6 +65,15 @@ cocktailApp.getDrinks = function(selectedDrink) {
 
 //Retrieve user selection
 
+cocktailApp.tryAgainListener = function(){
+
+    $('.restart').on('click', function(){
+        location.reload(true);
+        $('html').scrollTop(0);
+    });
+}
+
+
 cocktailApp.showResults = function(category) {
     //randomize a drink with index number 
     const randomItem = Math.floor(Math.random() * (category.drinks).length);
@@ -78,8 +89,10 @@ cocktailApp.showResults = function(category) {
 
     cocktailApp.getDrinkInstructions(randomDrinkId);
 
-    $('.cocktailContainer').append(`<img class="cocktailImg" src=${randomDrinkImageUrl}>`)
+    $('.cocktailImgContainer').append(`<img class="cocktailImg" src=${randomDrinkImageUrl}>`)
 
+    cocktailApp.tryAgainListener();
+   
     console.log(category.drinks[randomItem]);
 }
 
@@ -129,10 +142,11 @@ cocktailApp.instruction = function(instructions) {
         $('.cocktailIngredients').append(`<li class="ingredients">${items}</li>`);
     })
     measures.forEach(function(items){
-        $('.cocktailIngredients').append(`<li class="measure">${items}</li>`);
+        $('.cocktailMeasures').append(`<li class="measure">${items}</li>`);
     })
 
 }
+
 
 cocktailApp.init = function (){
 
