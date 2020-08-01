@@ -227,8 +227,7 @@ label {
   color: #352919; }
 
 .start,
-.restart,
-.another {
+.restart {
   display: inline-block;
   padding: 2rem 6rem;
   border-radius: 0.3rem;
@@ -241,8 +240,7 @@ label {
   text-transform: uppercase; }
 
 .start:hover,
-.restart:hover,
-.another:hover {
+.restart:hover {
   color: #000;
   background-color: #FFF7E8; }
 
@@ -269,7 +267,8 @@ header {
   height: 100vh;
   background-size: cover;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 h2 {
   font-size: 5rem;
@@ -329,11 +328,12 @@ h2 {
       border: 1rem solid #224742; }
 
 .results {
-  background: url(../../assets/part3.jpg);
+  background: url(../../assets/extra.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  text-align: center; }
   .results h2 {
     font-size: 5rem;
     padding: 3rem 0;

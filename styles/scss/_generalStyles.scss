@@ -52,8 +52,7 @@ label{
 }
 
 .start,
-.restart,
-.another{
+.restart{
     display:inline-block;
     padding: 2rem 6rem;
     border-radius: 0.3rem;
@@ -65,10 +64,8 @@ label{
     background-color: $colorPrimary;
     text-transform: uppercase;
 }
-
 .start:hover,
-.restart:hover,
-.another:hover{
+.restart:hover{
     color: $colorBlack;
     background-color: $colorSecondary;
 }
