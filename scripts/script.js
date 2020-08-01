@@ -152,13 +152,13 @@ cocktailApp.guideline = function(guide) {
     }
 
     ingredients.forEach(function(items){
-        $('.cocktailIngredients').append(`<li class="ingredients">${items}</li>`);
+        $('.cocktailIngredients').append(`<span class="ingredients">${items}</span>`);
     })
     measures.forEach(function(items){
-        $('.cocktailMeasures').append(`<li class="measure">${items}</li>`);
+        $('.cocktailMeasures').append(`<span class="measure">${items}</span>`);
     })
 
-    $('.resultContainer').append(`<span class="instructions">Instructions: ${instructions}</span>`)
+    $('.cocktailInstructions').append(`<span class="instructions">${instructions}</span>`)
 }
 
 

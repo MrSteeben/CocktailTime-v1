@@ -76,6 +76,9 @@ h2 {
 
 .cocktailContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 3rem;
 }
 
 .cocktailImgContainer {
@@ -91,30 +94,25 @@ h2 {
 
 .cocktailImg {
     border-radius: 50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.cocktailIngredients,
-.cocktailMeasures{
+.cocktailIngredientsAndMeasure{
     display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
     list-style: none;
     color: $colorSecondary;
     line-height: 3rem;
 }
 
-.instructions{
-    display: block;
-    margin: 3rem 0;
-    color: $colorSecondary;
+// .instructions{
+//     display: block;
+//     margin: 3rem 0;
+//     color: $colorSecondary;
+// }
+
+.cocktailIngredients,
+.cocktailMeasures,
+.cocktailInstructions{
+    display: flex;
+    flex-direction: column;
 }
 
-.cocktailIngredients {
-    order: 2;
-}
-
-.cocktailMeasures {
-    order: 3;
-    
-}

@@ -79,6 +79,17 @@
     }
 }
 
+@media (max-width: 712px){
+    .cocktailContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cocktailIngredientsAndMeasure{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 500px) {
 
     .mood {
@@ -118,6 +129,20 @@
             display: none;
             // width: 15rem;
             // height: 15rem;
+        }
+        p{
+            padding: 1rem 4rem;
+        }
+    }
+
+    .cocktailImgContainer{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+
+        img{
+            width: 100%;
+            height: 100%;
         }
     }
 }
