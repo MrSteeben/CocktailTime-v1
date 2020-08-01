@@ -271,7 +271,7 @@ header {
 
 h2 {
   font-size: 5rem;
-  margin: 3rem 0;
+  padding: 3rem 0;
   color: #FFF7E8; }
 
 .options {
@@ -324,6 +324,10 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+  .results h2 {
+    font-size: 5rem;
+    padding: 3rem 0;
+    color: #FFF7E8; }
 
 footer p {
   background: #000;
