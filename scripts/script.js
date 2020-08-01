@@ -39,8 +39,19 @@ cocktailApp.eventListener = function() {
 
         // Pass the user's clicked selection as a parameter to the function getDrinks()
         cocktailApp.getDrinks(selectedDrink);
+
+        cocktailApp.$li.off('click');
     })
 
+}
+
+cocktailApp.tryAgainListener = function() {
+
+    $('#restart').on('submit', function(e){
+        e.preventDefault();
+        $('.cocktailContainer').html('');
+        // cocktailApp.eventListener();  
+    })
 }
 
 // Receive the user's selected drink as a parameter and pass this value as data to our AJAX call
@@ -54,7 +65,6 @@ cocktailApp.getDrinks = function(selectedDrink) {
             i: selectedDrink
         }
     }).then((res) => {
-
         // pass the res from the AJAX call to the showResults() function to output the drinks Name and Photograph
         cocktailApp.showResults(res);
 
@@ -94,6 +104,7 @@ cocktailApp.getDrinkInstructions = function(randomDrinkId) {
             i: randomDrinkId
         }
     }).then((res) => {
+        
         // Pass the res of the AJAX call as a parameter to the instruction() function to extract the
         // Ingredients and Measurements and Mixing instructions for each drink
         cocktailApp.instruction(res);
@@ -138,6 +149,7 @@ cocktailApp.init = function (){
 
     cocktailApp.eventListener();
     cocktailApp.getDrinks();
+    cocktailApp.tryAgainListener();
 }
 
 
