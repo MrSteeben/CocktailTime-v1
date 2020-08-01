@@ -110,22 +110,26 @@ cocktailApp.getDrinkInstructions = function(randomDrinkId) {
     }).then((res) => {
         // Pass the res of the AJAX call as a parameter to the instruction() function to extract the
         // Ingredients and Measurements and Mixing instructions for each drink
-        cocktailApp.instruction(res);
+        cocktailApp.guideline(res);
     })
 }
 
-// get the drink mixing ingredients, quantities and instructions on how to make the drink
-cocktailApp.instruction = function(instructions) {
 
+// get the drink mixing ingredients, quantities and instructions on how to make the drink
+cocktailApp.guideline = function(guide) {
+    console.log(guide);
     // Empty array that hold the drink measurements
     const measures = [];
     // Empty array that hold the drink ingredients
     const ingredients = [];
+    //Variable that holds the drink instructions
+    const instructions = guide.drinks[0].strInstructions;
 
+    console.log(instructions);
     //Create an array of all ingredients (excluding null values)
     for(let i = 1; i < 16; i++){
         const ingredientName = `strIngredient${i}`;
-        const specificIngredient = instructions.drinks[0][ingredientName];
+        const specificIngredient = guide.drinks[0][ingredientName];
         if (specificIngredient != null){
             ingredients.push(specificIngredient);
         }
@@ -133,7 +137,7 @@ cocktailApp.instruction = function(instructions) {
     //Create an array of all measurements (excluding null values)
     for(let i = 1; i < 16; i++){
         const measureName = `strMeasure${i}`;
-        const specificMeasure = instructions.drinks[0][measureName];
+        const specificMeasure = guide.drinks[0][measureName];
         if (specificMeasure != null){
             measures.push(specificMeasure);
         }
@@ -145,6 +149,8 @@ cocktailApp.instruction = function(instructions) {
     measures.forEach(function(items){
         $('.cocktailMeasures').append(`<li class="measure">${items}</li>`);
     })
+
+    $('.cocktailInstructions').append(`<li class="instructions">${instructions}</li>`)
 }
 
 
