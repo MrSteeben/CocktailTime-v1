@@ -526,8 +526,8 @@ footer p {
     .option6 p {
       padding: 1rem 0rem; }
   .cocktailImgContainer {
-    width: 35rem;
-    height: 35rem;
+    width: 30rem;
+    height: 30rem;
     margin: 0 0 3rem 0; }
     .cocktailImgContainer img {
       width: 100%;
@@ -535,7 +535,9 @@ footer p {
     .cocktailImgContainer span {
       font-size: 3rem; }
   .restart {
-    width: 100%; } }
+    width: 100%; }
+  footer p {
+    font-size: 1.5rem; } }
 
 @media (max-width: 360px) {
   h1 {
@@ -559,6 +561,9 @@ footer p {
   .ingredients,
   .measure {
     font-size: 1.5rem; }
+  .cocktailImgContainer {
+    width: 25rem;
+    height: 25rem; }
   .mood {
     background-size: cover;
     background-position: right; } }

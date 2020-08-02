@@ -186,8 +186,8 @@
         }
 
     .cocktailImgContainer{
-        width: 35rem;
-        height: 35rem;
+        width: 30rem;
+        height: 30rem;
         margin: 0 0 3rem 0;
 
         img{
@@ -200,19 +200,14 @@
         }
     }
 
-    // .cocktailIngredientsAndMeasure{
-    //     align-items: center;
-    // }
-    // .cocktailIngredients{
-    //     100%;
-    // }
-    // .cocktailMeasures,
-    // .cocktailInstructions{
-    //     width: 100%;
-    // }
-
     .restart{
         width: 100%;
+    }
+
+    footer{
+        p{
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -247,6 +242,11 @@
     .ingredients,
     .measure {
         font-size: 1.5rem;
+    }
+
+    .cocktailImgContainer{
+        width: 25rem;
+        height: 25rem;
     }
     .mood{
         background-size: cover;
