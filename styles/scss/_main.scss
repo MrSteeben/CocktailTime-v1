@@ -1,6 +1,6 @@
 .mood {
     background: url(../../assets/part1.jpg);
-    // height: 100vh;
+    height: 100vh;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -29,6 +29,7 @@ h2 {
 
     list-style: none;
     margin-right: 2rem;
+    flex: 1 0 25%;
     p {
         text-align: center;
         color: $colorSecondary;
@@ -55,6 +56,12 @@ h2 {
     }
 }
 
+.option6{
+    img{
+        object-fit: cover;
+    }
+}
+
 .results {
     background: url(../../assets/extra.jpg);
     height: 100vh;
@@ -70,6 +77,13 @@ h2 {
     }
 }
 
+
+.ingredients,
+.measure,
+.instructions{
+    line-height: 3.5rem;
+}
+
 .resultContainer{
     background: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0, 0.5));
 }
@@ -78,41 +92,55 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 3rem;
+    padding: 4rem;
 }
 
 .cocktailImgContainer {
     width: 35rem;
     height: 35rem;
-    margin: 3rem;
+    margin: 3rem 0 5rem 0;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        order: 2;
+    }
     
     span {
         color: $colorSecondary;
-        background-color: 0;
+        font-size: 4rem;
+        order: 1;
+        margin-bottom: 2rem;
     }
 }
 
 .cocktailImg {
     border-radius: 50%;
+    border: 1rem solid $colorTertiary;
 }
 
 .cocktailIngredientsAndMeasure{
     display: flex;
-    list-style: none;
     color: $colorSecondary;
     line-height: 3rem;
 }
-
-// .instructions{
-//     display: block;
-//     margin: 3rem 0;
-//     color: $colorSecondary;
-// }
 
 .cocktailIngredients,
 .cocktailMeasures,
 .cocktailInstructions{
     display: flex;
     flex-direction: column;
+    margin: 0 1rem;
 }
 
+// .cocktailIngredients{
+//     width: 20%;
+// }
+
+// .cocktailMeasures{
+//     width: 35%;
+// }
+
+// .cocktailInstructions{
+//     width: 45%;
+// }

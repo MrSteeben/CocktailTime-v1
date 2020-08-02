@@ -186,7 +186,7 @@ html {
 /******************************/
 .wrapper {
   max-width: 1440px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto; }
 
 .skipLink {
@@ -213,9 +213,6 @@ body {
 h1 {
   font-family: "Poppins", sans-serif;
   font-size: 12rem; }
-
-h3 {
-  margin-right: 20px; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -269,6 +266,7 @@ header {
 
 .mood {
   background: url(../../assets/part1.jpg);
+  height: 100vh;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -291,7 +289,8 @@ h2 {
 .option5,
 .option6 {
   list-style: none;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  flex: 1 0 25%; }
   .option1 p,
   .option2 p,
   .option3 p,
@@ -336,6 +335,9 @@ h2 {
     .option6 img:focus {
       border: 1rem solid #224742; }
 
+.option6 img {
+  object-fit: cover; }
+
 .results {
   background: url(../../assets/extra.jpg);
   height: 100vh;
@@ -347,6 +349,11 @@ h2 {
     padding: 3rem 0;
     color: #FFF7E8; }
 
+.ingredients,
+.measure,
+.instructions {
+  line-height: 3.5rem; }
+
 .resultContainer {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)); }
 
@@ -354,22 +361,28 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 3rem; }
+  padding: 4rem; }
 
 .cocktailImgContainer {
   width: 35rem;
   height: 35rem;
-  margin: 3rem; }
+  margin: 3rem 0 5rem 0;
+  display: flex;
+  flex-direction: column; }
+  .cocktailImgContainer img {
+    order: 2; }
   .cocktailImgContainer span {
     color: #FFF7E8;
-    background-color: 0; }
+    font-size: 4rem;
+    order: 1;
+    margin-bottom: 2rem; }
 
 .cocktailImg {
-  border-radius: 50%; }
+  border-radius: 50%;
+  border: 1rem solid #BF8620; }
 
 .cocktailIngredientsAndMeasure {
   display: flex;
-  list-style: none;
   color: #FFF7E8;
   line-height: 3rem; }
 
@@ -377,7 +390,8 @@ h2 {
 .cocktailMeasures,
 .cocktailInstructions {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 0 1rem; }
 
 footer p {
   background: #000;
@@ -389,23 +403,38 @@ footer p {
   h1 {
     font-size: 10rem; }
   h2 {
-    font-size: 4rem; }
+    font-size: 4rem;
+    padding: 1.5rem 0; }
   h3,
   body,
   p {
-    font-size: 2.5rem; }
+    font-size: 3rem; }
+  .headerFlex h1 {
+    margin: 4rem 0; }
+  .headerFlex p {
+    margin-bottom: 0rem; }
+  button {
+    margin-top: 0rem; }
   .ingredients,
   .measure {
     font-size: 2.5rem; }
   .start,
   .restart {
     padding: 1.5rem 4rem; }
+  .cocktailContainer {
+    padding: 2rem; }
   .cocktailImgContainer {
     width: 30rem;
     height: 30rem; }
+  .cocktailIngredientsAndMeasure {
+    margin: 5rem 0 2rem 0; }
   .cocktailImg {
     width: 30rem;
-    height: 30rem; } }
+    height: 30rem; }
+  .results {
+    height: auto; }
+  .restart {
+    margin: 2rem 0; } }
 
 @media (max-width: 1055px) {
   .option1 img,
@@ -414,23 +443,22 @@ footer p {
   .option4 img,
   .option5 img,
   .option6 img {
-    width: 20rem;
-    height: 20rem; }
-  .cocktailImg {
     width: 25rem;
     height: 25rem; } }
 
 @media (max-width: 1024px) {
-  h1 {
-    font-size: 7.5rem; }
+  header .headerFlex h1 {
+    font-size: 8rem;
+    width: 100%;
+    margin: 4rem 0; }
   h2 {
-    font-size: 3rem; }
+    font-size: 4rem; }
   h3,
   body,
   p,
   .ingredients,
   .measure {
-    font-size: 2rem; }
+    font-size: 3rem; }
   .option1 img,
   .option2 img,
   .option3 img,
@@ -440,63 +468,97 @@ footer p {
     width: 18rem;
     height: 18rem; } }
 
-@media (max-width: 712px) {
+@media (max-width: 822px) {
   .cocktailContainer {
     flex-direction: column;
     align-items: center; }
   .cocktailIngredientsAndMeasure {
     flex-direction: column;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+  footer p {
+    font-size: 2.5rem; } }
 
 @media (max-width: 500px) {
   .mood {
     flex-direction: column; }
     .mood ul.options {
-      display: block;
+      justify-content: space-evenly;
+      flex-direction: column;
       width: 20rem;
       margin: auto auto; }
-  h1 {
-    font-size: 6rem; }
+  header .headerFlex {
+    text-align: center;
+    align-items: unset; }
+    header .headerFlex h1 {
+      font-size: 6rem; }
+    header .headerFlex p {
+      width: 100%; }
+    header .headerFlex button {
+      text-align: center; }
   h2 {
-    font-size: 2.5rem; }
+    font-size: 3.5rem; }
   h3 {
-    font-size: 2rem; }
+    font-size: 3rem; }
   body {
-    font-size: 1.8rem; }
+    font-size: 2rem; }
   .ingredients,
   .measure {
     font-size: 2rem; }
-  .option1 img,
-  .option2 img,
-  .option3 img,
-  .option4 img,
-  .option5 img,
-  .option6 img {
-    display: none; }
+  .option1,
+  .option2,
+  .option3,
+  .option4,
+  .option5,
+  .option6 {
+    margin-right: 0; }
+    .option1 img,
+    .option2 img,
+    .option3 img,
+    .option4 img,
+    .option5 img,
+    .option6 img {
+      display: none; }
+    .option1 p,
+    .option2 p,
+    .option3 p,
+    .option4 p,
+    .option5 p,
+    .option6 p {
+      padding: 1rem 0rem; }
+  .cocktailImgContainer {
+    width: 35rem;
+    height: 35rem;
+    margin: 0 0 3rem 0; }
+    .cocktailImgContainer img {
+      width: 100%;
+      height: 100%; }
+    .cocktailImgContainer span {
+      font-size: 3rem; }
+  .restart {
+    width: 100%; } }
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 4.5rem;
+    text-align: center; }
+  h2 {
+    font-size: 3.5rem; }
+  h3 {
+    font-size: 1.7rem; }
+  body {
+    font-size: 1.5rem; }
+  p {
+    font-size: 2.5rem; }
   .option1 p,
   .option2 p,
   .option3 p,
   .option4 p,
   .option5 p,
   .option6 p {
-    padding: 1rem 4rem; }
-  .cocktailImgContainer {
-    width: 100%;
-    height: 100%;
-    margin: 0rem; }
-    .cocktailImgContainer img {
-      width: 100%;
-      height: 100%; } }
-
-@media (max-width: 360px) {
-  h1 {
-    font-size: 4.5rem; }
-  h2 {
-    font-size: 2rem; }
-  h3 {
-    font-size: 1.7rem; }
-  body {
-    font-size: 1.5rem; }
+    padding: 1rem 0rem; }
   .ingredients,
   .measure {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .mood {
+    background-size: cover;
+    background-position: right; } }

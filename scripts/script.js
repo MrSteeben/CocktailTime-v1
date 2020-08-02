@@ -40,7 +40,7 @@ cocktailApp.eventListener = function() {
         $('html, body').animate({
             scrollTop: $(".results").offset().top
         }, 
-        'slow'
+        1500
         );
     })
 
@@ -71,7 +71,7 @@ cocktailApp.tryAgainListener = function(){
 
     $('.restart').on('click', function(){
         location.reload(true);
-        $('html, body').animate({scrollTop: 0}, 100);
+        $('html').scrollTop(0);
     });
 }
 
@@ -98,7 +98,7 @@ cocktailApp.showResults = function(category) {
 
 
     $('.cocktailImgContainer').append(`<img class="cocktailImg" src=${randomDrinkImageUrl}>`)
-    $('.cocktailImgContainer').append(`<span class="cocktailImg">${randomDrinkName}</span>`)
+    $('.cocktailImgContainer').append(`<span class="cocktailImgText">${randomDrinkName}</span>`)
 
     cocktailApp.tryAgainListener();
     console.log(category.drinks[randomItem]);

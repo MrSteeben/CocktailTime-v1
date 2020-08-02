@@ -4,11 +4,26 @@
     }
     h2 {
         font-size: 4rem;
+        padding: 1.5rem 0;
     }
     h3,
     body,
     p {
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+
+    .headerFlex{
+
+        h1{
+            margin: 4rem 0;
+        }
+        p {
+        margin-bottom: 0rem;
+        }
+    }
+
+    button{
+        margin-top: 0rem;
     }
 
     .ingredients,
@@ -21,14 +36,30 @@
         padding: 1.5rem 4rem;
     }
 
+    .cocktailContainer{
+        padding: 2rem;
+    }
+
     .cocktailImgContainer {
         width: 30rem;
         height: 30rem;
     }
 
+    .cocktailIngredientsAndMeasure{
+        margin: 5rem 0 2rem 0;
+    }
+
     .cocktailImg {
         width: 30rem;
         height: 30rem;
+    }
+
+    .results{
+        height: auto;
+    }
+
+    .restart{
+        margin: 2rem 0;
     }
 }
 
@@ -40,30 +71,30 @@
     .option5,
     .option6 {
         img {
-            width: 20rem;
-            height: 20rem;
+            width: 25rem;
+            height: 25rem;
         }
     }
 
-    .cocktailImg {
-        width: 25rem;
-        height: 25rem;
-    }
 }
 
 @media (max-width: 1024px) {
-    h1 {
-        font-size: 7.5rem;
+    header .headerFlex{
+        h1 {
+            font-size: 8rem;
+            width: 100%;
+            margin: 4rem 0;
+        }
     }
     h2 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     h3,
     body,
     p,
     .ingredients,
     .measure{
-        font-size: 2rem;
+        font-size: 3rem;
     }
     
     .option1,
@@ -79,7 +110,7 @@
     }
 }
 
-@media (max-width: 712px){
+@media (max-width: 822px){
     .cocktailContainer{
         flex-direction: column;
         align-items: center;
@@ -87,6 +118,11 @@
     .cocktailIngredientsAndMeasure{
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    footer{
+        p{
+            font-size: 2.5rem;
+        }
     }
 }
 
@@ -96,22 +132,36 @@
         flex-direction: column;
 
         ul.options {
-            display: block;
+            justify-content: space-evenly;
+            flex-direction: column;
             width: 20rem;
             margin: auto auto;
         }
     }
-    h1 {
-        font-size: 6rem;
+    header{
+        .headerFlex{
+            text-align: center;
+            align-items: unset;
+            h1{
+                font-size: 6rem;
+            }
+            p{
+                width: 100%;
+            }
+            button{
+                text-align: center;
+            }
+        }
     }
+
     h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     h3 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
     body {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .ingredients,
@@ -125,35 +175,55 @@
     .option4,
     .option5,
     .option6 {
+        margin-right: 0;
+
         img {
             display: none;
-            // width: 15rem;
-            // height: 15rem;
         }
         p{
-            padding: 1rem 4rem;
+            padding: 1rem 0rem;
         }
-    }
+        }
 
     .cocktailImgContainer{
-        width: 100%;
-        height: 100%;
-        margin: 0rem;
+        width: 35rem;
+        height: 35rem;
+        margin: 0 0 3rem 0;
 
         img{
             width: 100%;
             height: 100%;
         }
+
+        span{
+            font-size: 3rem;
+        }
+    }
+
+    // .cocktailIngredientsAndMeasure{
+    //     align-items: center;
+    // }
+    // .cocktailIngredients{
+    //     100%;
+    // }
+    // .cocktailMeasures,
+    // .cocktailInstructions{
+    //     width: 100%;
+    // }
+
+    .restart{
+        width: 100%;
     }
 }
 
 @media (max-width: 360px) {
     h1 {
         font-size: 4.5rem;
+        text-align: center;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
     h3 {
         font-size: 1.7rem;
@@ -161,8 +231,25 @@
     body {
         font-size: 1.5rem;
     }
+    p{
+        font-size: 2.5rem;
+    }
+    .option1,
+    .option2,
+    .option3,
+    .option4,
+    .option5,
+    .option6 {
+        p{
+            padding: 1rem 0rem;
+        }
+    }
     .ingredients,
     .measure {
         font-size: 1.5rem;
+    }
+    .mood{
+        background-size: cover;
+        background-position: right;
     }
 }
