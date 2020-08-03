@@ -25,15 +25,19 @@ h2 {
 .option4,
 .option5,
 .option6 {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style: none;
     margin-right: 2rem;
-    flex: 1 0 25%;
-    p {
+    flex: 1 1 30%;
+    a {
+        text-decoration: none;
         text-align: center;
         color: $colorSecondary;
         background: $colorTertiary;
         margin: 2rem 0;
+        width: 100%;
         border-radius: 10px;
         border: .5rem solid $colorTertiary;
 
@@ -49,7 +53,8 @@ h2 {
         height: 25rem;
         object-fit: contain;
         background-color: $colorWhite;
-            &:hover, &:focus{
+            &:hover,
+            &:focus {
             border: 1rem solid $colorGreen;
         }
     }
