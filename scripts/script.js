@@ -1,15 +1,13 @@
-
-// create namespace
+// Create namespace
 const cocktailApp = {};
 
-// Selector caching on the 'li' for better performance.  DO NOT REMOVE
+// Selector caching on the 'li' for better performance. 
 cocktailApp.$li = $('li');
 
-
-//DOC READY FUNCTION
+// Document ready function
 $(function() {
 
-    //Slow scroll from start to first slide
+    // Slow scroll from start to first slide
     $('.start').on('click', function() {
         $('html, body').animate({
             scrollTop: $(".mood").offset().top
@@ -23,18 +21,17 @@ $(function() {
 //Determine user input
 cocktailApp.eventListener = function() {
 
-    cocktailApp.$li.on('click', function(e){
+    cocktailApp.$li.on('click', function(e) {
         e.preventDefault();  
 
         // Store the selected drink the user 'clicked'
         let selectedDrink = $(this).attr('id');
 
-        // a simple console log to see what the user clicked, REMOVE THIS AT END OF PROJECT!!!!
-        console.log(selectedDrink);
-
         // Pass the user's clicked selection as a parameter to the function getDrinks()
         cocktailApp.getDrinks(selectedDrink);
 
+        // Turn event listener off when drink type is selected to prevent further clicking
+        // until the user selects the "try again" button at the bottom of the page
         cocktailApp.$li.off();
 
         $('html, body').animate({
@@ -45,7 +42,6 @@ cocktailApp.eventListener = function() {
     })
 
 }
-
 
 // Receive the user's selected drink as a parameter and pass this value as data to our AJAX call
 cocktailApp.getDrinks = function(selectedDrink) {
@@ -59,14 +55,13 @@ cocktailApp.getDrinks = function(selectedDrink) {
         }
     }).then((res) => {
 
-        // pass the res from the AJAX call to the showResults() function to output the drinks Name and Photograph
+        // Pass the res from the AJAX call to the showResults() function to output 
+        // the drinks Name and Photograph
         cocktailApp.showResults(res);
-
     })
 }
 
-//Retrieve user selection
-
+// Retrieve user selection
 cocktailApp.tryAgainListener = function(){
 
     $('.restart').on('click', function(){
@@ -75,29 +70,28 @@ cocktailApp.tryAgainListener = function(){
     });
 }
 
-
+// Receive results from the getDrinks AJAX call and randomize the user selection
 cocktailApp.showResults = function(category) {
-    //randomize a drink with index number 
+    // Randomize a drink with index number 
     const randomItem = Math.floor(Math.random() * (category.drinks).length);
 
-    //randomize a drink given random number
-    const randomDrink = category.drinks[randomItem].strDrink;
+    // Randomize a drink given random number
+    // const randomDrink = category.drinks[randomItem].strDrink;
 
-    //obtain randomized drink image URL
+    // Obtain randomized drink image URL
     const randomDrinkImageUrl = category.drinks[randomItem].strDrinkThumb;
 
-    //obtain randomized drink ID
+    // Obtain randomized drink ID
     const randomDrinkId = category.drinks[randomItem].idDrink;
 
-    //obtain randomized drink name
+    // Obtain randomized drink name
     const randomDrinkName = category.drinks[randomItem].strDrink;
 
     console.log(randomDrinkName);
 
     cocktailApp.getDrinkInstructions(randomDrinkId);
 
-
-    $('.cocktailImgContainer').append(`<img class="cocktailImg" src=${randomDrinkImageUrl}>`)
+    $('.cocktailImgContainer').append(`<img class="cocktailImg" src="${randomDrinkImageUrl}" alt="${randomDrinkName} cocktail drink">`)
     $('.cocktailImgContainer').append(`<span class="cocktailImgText">${randomDrinkName}</span>`)
 
     cocktailApp.tryAgainListener();
@@ -122,14 +116,14 @@ cocktailApp.getDrinkInstructions = function(randomDrinkId) {
 }
 
 
-// get the drink mixing ingredients, quantities and instructions on how to make the drink
+// Get the drink mixing ingredients, quantities and instructions on how to make the drink
 cocktailApp.guideline = function(guide) {
     console.log(guide);
     // Empty array that hold the drink measurements
     const measures = [];
     // Empty array that hold the drink ingredients
     const ingredients = [];
-    //Variable that holds the drink instructions
+    // Variable that holds the drink instructions
     const instructions = guide.drinks[0].strInstructions;
     
 
