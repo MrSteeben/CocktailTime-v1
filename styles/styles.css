@@ -308,7 +308,9 @@ button {
 }
 
 .start:hover,
-.restart:hover {
+.start:focus,
+.restart:hover
+.restart:focus {
   color: #000;
   background-color: #FFF7E8;
 }

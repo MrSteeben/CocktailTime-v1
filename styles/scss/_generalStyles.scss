@@ -70,7 +70,9 @@ button {
 }
 
 .start:hover,
-.restart:hover {
+.start:focus,
+.restart:hover
+.restart:focus {
     color: $colorBlack;
     background-color: $colorSecondary;
 }
