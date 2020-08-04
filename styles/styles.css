@@ -236,12 +236,16 @@ html {
 /******************************/
 /* Color Variables            */
 /******************************/
+/******************************/
+/* General Styles             */
+/******************************/
 .wrapper {
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
 }
 
+/* Accessibility skip link */
 .skipLink {
   position: absolute;
   left: -1000px;
@@ -291,6 +295,7 @@ button {
   margin-top: 3rem;
 }
 
+/* start and restart button styles */
 .start,
 .restart {
   display: inline-block;
@@ -315,6 +320,9 @@ button {
   background-color: #FFF7E8;
 }
 
+/******************************/
+/* Header Styles              */
+/******************************/
 header {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), url(../assets/headerHeroImage.jpg);
@@ -352,7 +360,7 @@ header .headerFlex p {
 }
 
 .mood {
-  background: url(../../assets/part1.jpg);
+  background: url(../assets/part1.jpg);
   height: 100vh;
   background-size: cover;
   display: -webkit-box;
@@ -464,7 +472,7 @@ h2 {
 }
 
 .results {
-  background: url(../../assets/extra.jpg);
+  background: url(../assets/extra.jpg);
   height: auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -571,7 +579,8 @@ footer p {
   }
   h3,
   body,
-  p {
+  p,
+  a {
     font-size: 3rem;
   }
   .headerFlex h1 {
@@ -637,6 +646,7 @@ footer p {
   h3,
   body,
   p,
+  a,
   .ingredients,
   .measure {
     font-size: 3rem;
@@ -738,11 +748,17 @@ footer p {
     display: none;
   }
   .option1 p,
+  .option1 a,
   .option2 p,
+  .option2 a,
   .option3 p,
+  .option3 a,
   .option4 p,
+  .option4 a,
   .option5 p,
-  .option6 p {
+  .option5 a,
+  .option6 p,
+  .option6 a {
     padding: 1rem 0rem;
   }
   .cocktailImgContainer {
@@ -779,7 +795,8 @@ footer p {
   body {
     font-size: 1.5rem;
   }
-  p {
+  p,
+  a {
     font-size: 2.5rem;
   }
   .option1 p,

@@ -8,7 +8,8 @@
     }
     h3,
     body,
-    p {
+    p,
+    a {
         font-size: 3rem;
     }
 
@@ -79,7 +80,7 @@
 }
 
 @media (max-width: 1024px) {
-    header .headerFlex{
+    header .headerFlex {
         h1 {
             font-size: 8rem;
             width: 100%;
@@ -92,8 +93,9 @@
     h3,
     body,
     p,
+    a,
     .ingredients,
-    .measure{
+    .measure {
         font-size: 3rem;
     }
     
@@ -110,17 +112,17 @@
     }
 }
 
-@media (max-width: 822px){
-    .cocktailContainer{
+@media (max-width: 822px) {
+    .cocktailContainer {
         flex-direction: column;
         align-items: center;
     }
-    .cocktailIngredientsAndMeasure{
+    .cocktailIngredientsAndMeasure {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    footer{
-        p{
+    footer {
+        p {
             font-size: 2.5rem;
         }
     }
@@ -138,17 +140,17 @@
             margin: auto auto;
         }
     }
-    header{
-        .headerFlex{
+    header {
+        .headerFlex {
             text-align: center;
             align-items: unset;
-            h1{
+            h1 {
                 font-size: 6rem;
             }
-            p{
+            p {
                 width: 100%;
             }
-            button{
+            button {
                 text-align: center;
             }
         }
@@ -180,32 +182,33 @@
         img {
             display: none;
         }
-        p{
+        p,
+        a {
             padding: 1rem 0rem;
         }
-        }
+    }
 
-    .cocktailImgContainer{
+    .cocktailImgContainer {
         width: 30rem;
         height: 30rem;
         margin: 0 0 3rem 0;
 
-        img{
+        img {
             width: 100%;
             height: 100%;
         }
 
-        span{
+        span {
             font-size: 3rem;
         }
     }
 
-    .restart{
+    .restart {
         width: 100%;
     }
 
-    footer{
-        p{
+    footer {
+        p {
             font-size: 1.5rem;
         }
     }
@@ -226,7 +229,8 @@
     body {
         font-size: 1.5rem;
     }
-    p{
+    p,
+    a {
         font-size: 2.5rem;
     }
     .option1,
@@ -235,7 +239,7 @@
     .option4,
     .option5,
     .option6 {
-        p{
+        p {
             padding: 1rem 0rem;
         }
     }
@@ -244,11 +248,11 @@
         font-size: 1.5rem;
     }
 
-    .cocktailImgContainer{
+    .cocktailImgContainer {
         width: 25rem;
         height: 25rem;
     }
-    .mood{
+    .mood {
         background-size: cover;
         background-position: right;
     }

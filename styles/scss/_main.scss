@@ -1,5 +1,5 @@
 .mood {
-    background: url(../../assets/part1.jpg);
+    background: url(../assets/part1.jpg);
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -67,20 +67,18 @@ h2 {
 }
 
 .results {
-    background: url(../../assets/extra.jpg);
+    background: url(../assets/extra.jpg);
     // height: 100vh;
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
-
     h2 {
         padding: 3rem 0;
         color: $colorSecondary;
     }
 }
-
 
 .ingredients,
 .measure,

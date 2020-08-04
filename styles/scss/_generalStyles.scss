@@ -1,12 +1,15 @@
 // DEBUGGING style
 // * {border: 1px solid red;}
-
+/******************************/
+/* General Styles             */
+/******************************/
 .wrapper {
     max-width: 1440px;
     width: 90%;
     margin: 0 auto;
 }
 
+/* Accessibility skip link */
 .skipLink {
     position: absolute;
     left: -1000px;
@@ -55,6 +58,7 @@ button {
     margin-top: 3rem;
 }
 
+/* start and restart button styles */
 .start,
 .restart {
     display: inline-block;
