@@ -1,3 +1,9 @@
+/******************************/
+/* SCSS Partials Imports      */
+/******************************/
+/******************************/
+/* CSS Setup Styles           */
+/******************************/
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -259,12 +265,24 @@ html {
   left: 0;
 }
 
+a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 3rem;
+}
+
+a:hover {
+  color: #EA593C;
+}
+
 html,
 h1,
 h2,
 p,
 ul,
-body {
+body,
+a {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -359,6 +377,9 @@ header .headerFlex p {
   margin-bottom: 3rem;
 }
 
+/******************************/
+/* Main Styles                */
+/******************************/
 .mood {
   background: url(../assets/part1.jpg);
   height: 100vh;
@@ -562,6 +583,9 @@ h2 {
   margin: 0 1rem;
 }
 
+/******************************/
+/* Footer Styles              */
+/******************************/
 footer p {
   background: #000;
   padding: 2rem 0;
@@ -680,7 +704,8 @@ footer p {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  footer p {
+  footer p,
+  footer a {
     font-size: 2.5rem;
   }
 }
@@ -776,7 +801,8 @@ footer p {
   .restart {
     width: 100%;
   }
-  footer p {
+  footer p,
+  footer a {
     font-size: 1.5rem;
   }
 }

@@ -87,15 +87,12 @@ cocktailApp.showResults = function(category) {
     // Obtain randomized drink name
     const randomDrinkName = category.drinks[randomItem].strDrink;
 
-    console.log(randomDrinkName);
-
     cocktailApp.getDrinkInstructions(randomDrinkId);
 
     $('.cocktailImgContainer').append(`<img class="cocktailImg" src="${randomDrinkImageUrl}" alt="${randomDrinkName} cocktail drink">`)
     $('.cocktailImgContainer').append(`<span class="cocktailImgText">${randomDrinkName}</span>`)
 
     cocktailApp.tryAgainListener();
-    console.log(category.drinks[randomItem]);
 }
 
 // Receive the drink ID value for each drink generated and pass the id as data to the AJAX call
@@ -118,7 +115,6 @@ cocktailApp.getDrinkInstructions = function(randomDrinkId) {
 
 // Get the drink mixing ingredients, quantities and instructions on how to make the drink
 cocktailApp.guideline = function(guide) {
-    console.log(guide);
     // Empty array that hold the drink measurements
     const measures = [];
     // Empty array that hold the drink ingredients
@@ -126,9 +122,7 @@ cocktailApp.guideline = function(guide) {
     // Variable that holds the drink instructions
     const instructions = guide.drinks[0].strInstructions;
     
-
-    console.log(instructions);
-    //Create an array of all ingredients (excluding null values)
+    // Create an array of all ingredients (excluding null values)
     for(let i = 1; i < 16; i++){
         const ingredientName = `strIngredient${i}`;
         const specificIngredient = guide.drinks[0][ingredientName];
@@ -136,7 +130,8 @@ cocktailApp.guideline = function(guide) {
             ingredients.push(specificIngredient);
         }
     }
-    //Create an array of all measurements (excluding null values)
+
+    // Create an array of all measurements (excluding null values)
     for(let i = 1; i < 16; i++){
         const measureName = `strMeasure${i}`;
         const specificMeasure = guide.drinks[0][measureName];
@@ -145,21 +140,22 @@ cocktailApp.guideline = function(guide) {
         }
     }
 
+    // Append ingredients to the results container
     ingredients.forEach(function(items){
         $('.cocktailIngredients').append(`<span class="ingredients">${items}</span>`);
     })
+    // Append cocktail measurements to the results container
     measures.forEach(function(items){
         $('.cocktailMeasures').append(`<span class="measure">${items}</span>`);
     })
-
+    // Append cocktail instructions to the results container
     $('.cocktailInstructions').append(`<span class="instructions">${instructions}</span>`)
 }
 
-
+// Begin execution of the cocktail app by listening for the user's click selection of a drink
 cocktailApp.init = function (){
 
     cocktailApp.eventListener();
-    cocktailApp.getDrinks();
 }
 
 

@@ -2,10 +2,12 @@
     h1 {
         font-size: 10rem;
     }
+
     h2 {
         font-size: 4rem;
         padding: 1.5rem 0;
     }
+    
     h3,
     body,
     p,
@@ -14,8 +16,7 @@
     }
 
     .headerFlex {
-
-        h1{
+        h1 {
             margin: 4rem 0;
         }
         p {
@@ -76,7 +77,6 @@
             height: 25rem;
         }
     }
-
 }
 
 @media (max-width: 1024px) {
@@ -87,9 +87,11 @@
             margin: 4rem 0;
         }
     }
+
     h2 {
         font-size: 4rem;
     }
+
     h3,
     body,
     p,
@@ -117,12 +119,15 @@
         flex-direction: column;
         align-items: center;
     }
+
     .cocktailIngredientsAndMeasure {
         flex-direction: column;
         flex-wrap: wrap;
     }
+
     footer {
-        p {
+        p,
+        a {
             font-size: 2.5rem;
         }
     }
@@ -132,7 +137,6 @@
 
     .mood {
         flex-direction: column;
-
         ul.options {
             justify-content: space-evenly;
             flex-direction: column;
@@ -140,6 +144,7 @@
             margin: auto auto;
         }
     }
+
     header {
         .headerFlex {
             text-align: center;
@@ -182,6 +187,7 @@
         img {
             display: none;
         }
+
         p,
         a {
             padding: 1rem 0rem;
@@ -208,7 +214,8 @@
     }
 
     footer {
-        p {
+        p,
+        a {
             font-size: 1.5rem;
         }
     }
@@ -223,16 +230,20 @@
     h2 {
         font-size: 3.5rem;
     }
+
     h3 {
         font-size: 1.7rem;
     }
+
     body {
         font-size: 1.5rem;
     }
+
     p,
     a {
         font-size: 2.5rem;
     }
+
     .option1,
     .option2,
     .option3,
@@ -243,6 +254,7 @@
             padding: 1rem 0rem;
         }
     }
+
     .ingredients,
     .measure {
         font-size: 1.5rem;
@@ -252,6 +264,7 @@
         width: 25rem;
         height: 25rem;
     }
+
     .mood {
         background-size: cover;
         background-position: right;
