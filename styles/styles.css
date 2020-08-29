@@ -382,6 +382,7 @@ header .headerFlex p {
 /******************************/
 .mood {
   background: url(../assets/part1.jpg);
+  background-color: #000;
   height: 100vh;
   background-size: cover;
   display: -webkit-box;
@@ -397,6 +398,7 @@ h2 {
   font-size: 5rem;
   padding: 3rem 0;
   color: #FFF7E8;
+  background-color: #2e2e2e;
 }
 
 .options {
