@@ -4,7 +4,7 @@
     }
 
     h2 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         padding: 1.5rem 0;
     }
     
@@ -38,7 +38,7 @@
         padding: 1.5rem 4rem;
     }
 
-    .cocktailContainer{
+    .cocktailContainer {
         padding: 2rem;
     }
 
@@ -88,8 +88,9 @@
         }
     }
 
-    h2 {
-        font-size: 4rem;
+
+    .mood h2 {
+        font-size: 3rem;
     }
 
     h3,
@@ -121,8 +122,17 @@
     }
 
     .cocktailIngredientsAndMeasure {
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .cocktailIngredients,
+    .cocktailMeasures,
+    .cocktailInstructions {
+        margin-bottom: 30px;
+        
+        h3 {
+            font-size: 2rem;
+        }
     }
 
     footer {
@@ -171,11 +181,6 @@
         font-size: 2rem;
     }
 
-    .ingredients,
-    .measure {
-        font-size: 2rem;
-    }
-
     .option1,
     .option2,
     .option3,
@@ -209,6 +214,31 @@
         }
     }
 
+    .instructions,
+    .ingredients,
+    .measure {
+        font-size: 1.5rem;
+    }
+
+    .cocktailIngredients,
+    .cocktailMeasures,
+    .cocktailInstructions {
+
+        margin: 0 0 30px 0;
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .cocktailMeasures {
+        margin-right: 0.5rem;
+    }
+
+    .cocktailInstructions {
+        margin: 0 2rem;
+    }
+
+    .cocktailIngredients,
     .restart {
         width: 100%;
     }
@@ -228,7 +258,7 @@
     }
 
     h2 {
-        font-size: 3.5rem;
+        font-size: 2rem;
     }
 
     h3 {

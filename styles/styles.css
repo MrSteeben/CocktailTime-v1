@@ -235,7 +235,8 @@ h1 {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 3rem; }
+  font-size: 3rem;
+  background-color: #000; }
 
 img {
   max-width: 100%;
@@ -296,12 +297,16 @@ header {
   background-size: cover;
   display: flex;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  padding-top: 0; }
+  .mood h2 {
+    margin-bottom: 3rem; }
 
 h2 {
   font-size: 5rem;
   padding: 3rem 0;
-  color: #FFF7E8; }
+  color: #FFF7E8;
+  background-color: #2e2e2e; }
 
 .options {
   display: flex;
@@ -320,27 +325,32 @@ h2 {
   list-style: none;
   margin-right: 2rem;
   flex: 1 1 30%; }
-  .option1 a,
-  .option2 a,
-  .option3 a,
-  .option4 a,
-  .option5 a,
-  .option6 a {
+  .option1 button,
+  .option2 button,
+  .option3 button,
+  .option4 button,
+  .option5 button,
+  .option6 button {
     text-decoration: none;
     text-align: center;
     color: #FFF7E8;
-    background: #BF8620;
+    background: #352919;
     margin: 2rem 0;
     width: 100%;
     border-radius: 10px;
-    border: 0.5rem solid #BF8620; }
-    .option1 a:hover,
-    .option2 a:hover,
-    .option3 a:hover,
-    .option4 a:hover,
-    .option5 a:hover,
-    .option6 a:hover {
-      border: 0.5rem solid #224742; }
+    border: 0.5rem solid #352919; }
+    .option1 button:hover, .option1 button:focus,
+    .option2 button:hover,
+    .option2 button:focus,
+    .option3 button:hover,
+    .option3 button:focus,
+    .option4 button:hover,
+    .option4 button:focus,
+    .option5 button:hover,
+    .option5 button:focus,
+    .option6 button:hover,
+    .option6 button:focus {
+      border: 0.5rem solid #BF8620; }
   .option1 img,
   .option2 img,
   .option3 img,
@@ -348,7 +358,7 @@ h2 {
   .option5 img,
   .option6 img {
     border-radius: 50%;
-    border: 1rem solid #BF8620;
+    border: 1rem solid #352919;
     width: 25rem;
     height: 25rem;
     object-fit: contain;
@@ -364,11 +374,14 @@ h2 {
     .option5 img:focus,
     .option6 img:hover,
     .option6 img:focus {
-      border: 1rem solid #224742; }
+      border: 1rem solid #BF8620; }
 
 .option6 img {
   object-fit: cover; }
 
+/**************************
+* Results Container Styles
+**************************/
 .results {
   background: url(../assets/extra.jpg);
   height: auto;
@@ -376,9 +389,6 @@ h2 {
   background-size: cover;
   background-position: center;
   text-align: center; }
-  .results h2 {
-    padding: 3rem 0;
-    color: #FFF7E8; }
 
 .ingredients,
 .measure,
@@ -398,7 +408,7 @@ h2 {
 .cocktailImgContainer {
   width: 35rem;
   height: 35rem;
-  margin: 3rem 0 5rem 0;
+  margin: 3rem 0 10rem 0;
   display: flex;
   flex-direction: column; }
   .cocktailImgContainer img {
@@ -413,7 +423,8 @@ h2 {
   border-radius: 50%;
   border: 1rem solid #BF8620; }
 
-.cocktailIngredientsAndMeasure {
+.cocktailIngredientsAndMeasure,
+.cocktailInstructions {
   display: flex;
   color: #FFF7E8;
   line-height: 3rem; }
@@ -423,7 +434,18 @@ h2 {
 .cocktailInstructions {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem; }
+  margin: 1rem 1rem;
+  background-color: #352919;
+  border-radius: 20px;
+  padding: 10px; }
+
+.cocktailInstructions {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin: 0 2rem; }
+
+.restart {
+  margin-bottom: 3rem; }
 
 .fas {
   color: #FFF7E8;
@@ -444,7 +466,7 @@ footer p {
   h1 {
     font-size: 10rem; }
   h2 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     padding: 1.5rem 0; }
   h3,
   body,
@@ -493,8 +515,8 @@ footer p {
     font-size: 8rem;
     width: 100%;
     margin: 4rem 0; }
-  h2 {
-    font-size: 4rem; }
+  .mood h2 {
+    font-size: 3rem; }
   h3,
   body,
   p,
@@ -516,8 +538,15 @@ footer p {
     flex-direction: column;
     align-items: center; }
   .cocktailIngredientsAndMeasure {
-    flex-direction: column;
-    flex-wrap: wrap; }
+    flex-direction: row; }
+  .cocktailIngredients,
+  .cocktailMeasures,
+  .cocktailInstructions {
+    margin-bottom: 30px; }
+    .cocktailIngredients h3,
+    .cocktailMeasures h3,
+    .cocktailInstructions h3 {
+      font-size: 2rem; }
   footer p,
   footer a {
     font-size: 2.5rem; } }
@@ -544,9 +573,6 @@ footer p {
   h3 {
     font-size: 3rem; }
   body {
-    font-size: 2rem; }
-  .ingredients,
-  .measure {
     font-size: 2rem; }
   .option1,
   .option2,
@@ -584,6 +610,23 @@ footer p {
       height: 100%; }
     .cocktailImgContainer span {
       font-size: 3rem; }
+  .instructions,
+  .ingredients,
+  .measure {
+    font-size: 1.5rem; }
+  .cocktailIngredients,
+  .cocktailMeasures,
+  .cocktailInstructions {
+    margin: 0 0 30px 0; }
+    .cocktailIngredients h3,
+    .cocktailMeasures h3,
+    .cocktailInstructions h3 {
+      font-size: 1.5rem; }
+  .cocktailMeasures {
+    margin-right: 0.5rem; }
+  .cocktailInstructions {
+    margin: 0 2rem; }
+  .cocktailIngredients,
   .restart {
     width: 100%; }
   footer p,
@@ -595,7 +638,7 @@ footer p {
     font-size: 4.5rem;
     text-align: center; }
   h2 {
-    font-size: 3.5rem; }
+    font-size: 2rem; }
   h3 {
     font-size: 1.7rem; }
   body {

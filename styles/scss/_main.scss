@@ -9,13 +9,20 @@
     display: flex;
     align-items: center;
     text-align: center;
+    padding-top: 0;
+
+    h2 {
+        margin-bottom: 3rem;
+    }
 }
 
 h2 { 
     font-size: 5rem;
     padding: 3rem 0;
     color: $colorSecondary;
+    background-color: rgb(46, 46, 46);
 }
+
 
 .options {
     display: flex;
@@ -35,31 +42,32 @@ h2 {
     list-style: none;
     margin-right: 2rem;
     flex: 1 1 30%;
-    a {
+    button {
         text-decoration: none;
         text-align: center;
         color: $colorSecondary;
-        background: $colorTertiary;
+        background: $colorPrimary;
         margin: 2rem 0;
         width: 100%;
         border-radius: 10px;
-        border: .5rem solid $colorTertiary;
+        border: .5rem solid $colorPrimary;
 
-        &:hover {
-            border: .5rem solid $colorGreen;
+        &:hover,
+        &:focus {
+            border: .5rem solid $colorTertiary;
         }
     }
 
     img {
         border-radius: 50%;
-        border: 1rem solid $colorTertiary;
+        border: 1rem solid $colorPrimary;
         width: 25rem;
         height: 25rem;
         object-fit: contain;
         background-color: $colorWhite;
             &:hover,
             &:focus {
-            border: 1rem solid $colorGreen;
+            border: 1rem solid $colorTertiary;
         }
     }
 }
@@ -70,18 +78,16 @@ h2 {
     }
 }
 
+/**************************
+* Results Container Styles
+**************************/
 .results {
     background: url(../assets/extra.jpg);
-    // height: 100vh;
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
-    h2 {
-        padding: 3rem 0;
-        color: $colorSecondary;
-    }
 }
 
 .ingredients,
@@ -105,7 +111,7 @@ h2 {
 .cocktailImgContainer {
     width: 35rem;
     height: 35rem;
-    margin: 3rem 0 5rem 0;
+    margin: 3rem 0 10rem 0;
     display: flex;
     flex-direction: column;
 
@@ -126,7 +132,8 @@ h2 {
     border: 1rem solid $colorTertiary;
 }
 
-.cocktailIngredientsAndMeasure {
+.cocktailIngredientsAndMeasure,
+.cocktailInstructions {
     display: flex;
     color: $colorSecondary;
     line-height: 3rem;
@@ -137,7 +144,21 @@ h2 {
 .cocktailInstructions {
     display: flex;
     flex-direction: column;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
+    
+    background-color: $colorPrimary;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.cocktailInstructions {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0 2rem;
+}
+
+.restart {
+    margin-bottom: 3rem;
 }
 
 .fas{

@@ -2,9 +2,6 @@
 /* General Styles             */
 /******************************/
 
-// DEBUGGING style
-// * {border: 1px solid red;}
-
 .wrapper {
     max-width: 1440px;
     width: 90%;
@@ -56,6 +53,7 @@ h1 {
 body {
     font-family: $bodyFont;
     font-size: 3rem;
+    background-color: #000;
 }
 
 img {
