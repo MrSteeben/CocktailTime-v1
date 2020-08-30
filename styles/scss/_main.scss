@@ -4,7 +4,6 @@
 
 .mood {
     background: url(../assets/part1.jpg);
-    background-color: #000;
     height: 100vh;
     background-size: cover;
     display: flex;
@@ -37,31 +36,32 @@ h2 {
     list-style: none;
     margin-right: 2rem;
     flex: 1 1 30%;
-    a {
+    button {
         text-decoration: none;
         text-align: center;
         color: $colorSecondary;
-        background: $colorTertiary;
+        background: $colorPrimary;
         margin: 2rem 0;
         width: 100%;
         border-radius: 10px;
-        border: .5rem solid $colorTertiary;
+        border: .5rem solid $colorPrimary;
 
-        &:hover {
-            border: .5rem solid $colorGreen;
+        &:hover,
+        &:focus {
+            border: .5rem solid $colorTertiary;
         }
     }
 
     img {
         border-radius: 50%;
-        border: 1rem solid $colorTertiary;
+        border: 1rem solid $colorPrimary;
         width: 25rem;
         height: 25rem;
         object-fit: contain;
         background-color: $colorWhite;
             &:hover,
             &:focus {
-            border: 1rem solid $colorGreen;
+            border: 1rem solid $colorTertiary;
         }
     }
 }

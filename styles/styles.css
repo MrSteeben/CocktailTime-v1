@@ -296,6 +296,7 @@ h1 {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
+  background-color: #000;
 }
 
 img {
@@ -382,7 +383,6 @@ header .headerFlex p {
 /******************************/
 .mood {
   background: url(../assets/part1.jpg);
-  background-color: #000;
   height: 100vh;
   background-size: cover;
   display: -webkit-box;
@@ -435,29 +435,34 @@ h2 {
           flex: 1 1 30%;
 }
 
-.option1 a,
-.option2 a,
-.option3 a,
-.option4 a,
-.option5 a,
-.option6 a {
+.option1 button,
+.option2 button,
+.option3 button,
+.option4 button,
+.option5 button,
+.option6 button {
   text-decoration: none;
   text-align: center;
   color: #FFF7E8;
-  background: #BF8620;
+  background: #352919;
   margin: 2rem 0;
   width: 100%;
   border-radius: 10px;
-  border: 0.5rem solid #BF8620;
+  border: 0.5rem solid #352919;
 }
 
-.option1 a:hover,
-.option2 a:hover,
-.option3 a:hover,
-.option4 a:hover,
-.option5 a:hover,
-.option6 a:hover {
-  border: 0.5rem solid #224742;
+.option1 button:hover, .option1 button:focus,
+.option2 button:hover,
+.option2 button:focus,
+.option3 button:hover,
+.option3 button:focus,
+.option4 button:hover,
+.option4 button:focus,
+.option5 button:hover,
+.option5 button:focus,
+.option6 button:hover,
+.option6 button:focus {
+  border: 0.5rem solid #BF8620;
 }
 
 .option1 img,
@@ -467,7 +472,7 @@ h2 {
 .option5 img,
 .option6 img {
   border-radius: 50%;
-  border: 1rem solid #BF8620;
+  border: 1rem solid #352919;
   width: 25rem;
   height: 25rem;
   -o-object-fit: contain;
@@ -486,7 +491,7 @@ h2 {
 .option5 img:focus,
 .option6 img:hover,
 .option6 img:focus {
-  border: 1rem solid #224742;
+  border: 1rem solid #BF8620;
 }
 
 .option6 img {
