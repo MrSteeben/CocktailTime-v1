@@ -57,7 +57,7 @@ cocktailApp.getDrinks = function(selectedDrink) {
 
         // Pass the res from the AJAX call to the showResults() function to output 
         // the drinks Name and Photograph
-        cocktailApp.showResults(res);
+        cocktailApp.getRandomDrink(res);
     })
 }
 
@@ -71,7 +71,7 @@ cocktailApp.tryAgainListener = function(){
 }
 
 // Receive results from the getDrinks AJAX call and randomize the user selection
-cocktailApp.showResults = function(category) {
+cocktailApp.getRandomDrink = function(category) {
     // Randomize a drink with index number 
     const randomItem = Math.floor(Math.random() * (category.drinks).length);
 
@@ -108,13 +108,13 @@ cocktailApp.getDrinkInstructions = function(randomDrinkId) {
     }).then((res) => {
         // Pass the res of the AJAX call as a parameter to the instruction() function to extract the
         // Ingredients and Measurements and Mixing instructions for each drink
-        cocktailApp.guideline(res);
+        cocktailApp.guideLine(res);
     })
 }
 
 
 // Get the drink mixing ingredients, quantities and instructions on how to make the drink
-cocktailApp.guideline = function(guide) {
+cocktailApp.guideLine = function(guide) {
     // Empty array that hold the drink measurements
     const measures = [];
     // Empty array that hold the drink ingredients
