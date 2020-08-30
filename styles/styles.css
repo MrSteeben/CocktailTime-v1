@@ -1,3 +1,9 @@
+/******************************/
+/* SCSS Partials Imports      */
+/******************************/
+/******************************/
+/* CSS Setup Styles           */
+/******************************/
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -184,11 +190,15 @@ html {
 /******************************/
 /* Color Variables            */
 /******************************/
+/******************************/
+/* General Styles             */
+/******************************/
 .wrapper {
   max-width: 1440px;
   width: 90%;
   margin: 0 auto; }
 
+/* Accessibility skip link */
 .skipLink {
   position: absolute;
   left: -1000px;
@@ -200,12 +210,24 @@ html {
 .skipLink:focus {
   left: 0; }
 
+a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  font-size: 3rem;
+}
+
+a:hover {
+  color: #EA593C;
+}
+
 html,
 h1,
 h2,
 p,
 ul,
-body {
+body,
+a {
   margin: 0;
   padding: 0;
   text-transform: uppercase; }
@@ -229,7 +251,13 @@ label {
 button {
   margin-top: 3rem; }
 
+<<<<<<< HEAD
 .start {
+=======
+/* start and restart button styles */
+.start,
+.restart {
+>>>>>>> 071a2670cd3c667cf7ba69fc730daa2c09c3632a
   display: inline-block;
   padding: 2rem 6rem;
   border-radius: 0.3rem;
@@ -246,6 +274,9 @@ button {
   color: #000;
   background-color: #FFF7E8; }
 
+/******************************/
+/* Header Styles              */
+/******************************/
 header {
   height: 100vh;
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../assets/headerHeroImage.jpg);
@@ -263,8 +294,11 @@ header {
       width: 70%;
       margin-bottom: 3rem; }
 
+/******************************/
+/* Main Styles                */
+/******************************/
 .mood {
-  background: url(../../assets/part1.jpg);
+  background: url(../assets/part1.jpg);
   height: 100vh;
   background-size: cover;
   display: flex;
@@ -343,7 +377,7 @@ h2 {
   object-fit: cover; }
 
 .results {
-  background: url(../../assets/extra.jpg);
+  background: url(../assets/extra.jpg);
   height: auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -405,6 +439,9 @@ h2 {
   right: 10rem;
   top: 13rem; }
 
+/******************************/
+/* Footer Styles              */
+/******************************/
 footer p {
   background: #000;
   padding: 2rem 0;
@@ -419,8 +456,15 @@ footer p {
     padding: 1.5rem 0; }
   h3,
   body,
+<<<<<<< HEAD
   p {
     font-size: 3rem; }
+=======
+  p,
+  a {
+    font-size: 3rem;
+  }
+>>>>>>> 071a2670cd3c667cf7ba69fc730daa2c09c3632a
   .headerFlex h1 {
     margin: 4rem 0; }
   .headerFlex p {
@@ -468,6 +512,7 @@ footer p {
   h3,
   body,
   p,
+  a,
   .ingredients,
   .measure {
     font-size: 3rem; }
@@ -485,10 +530,25 @@ footer p {
     flex-direction: column;
     align-items: center; }
   .cocktailIngredientsAndMeasure {
+<<<<<<< HEAD
     flex-direction: column;
     flex-wrap: wrap; }
   footer p {
     font-size: 2.5rem; } }
+=======
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer p,
+  footer a {
+    font-size: 2.5rem;
+  }
+}
+>>>>>>> 071a2670cd3c667cf7ba69fc730daa2c09c3632a
 
 @media (max-width: 500px) {
   .mood {
@@ -522,6 +582,7 @@ footer p {
   .option4,
   .option5,
   .option6 {
+<<<<<<< HEAD
     margin-right: 0; }
     .option1 img,
     .option2 img,
@@ -537,6 +598,32 @@ footer p {
     .option5 p,
     .option6 p {
       padding: 1rem 0rem; }
+=======
+    margin-right: 0;
+  }
+  .option1 img,
+  .option2 img,
+  .option3 img,
+  .option4 img,
+  .option5 img,
+  .option6 img {
+    display: none;
+  }
+  .option1 p,
+  .option1 a,
+  .option2 p,
+  .option2 a,
+  .option3 p,
+  .option3 a,
+  .option4 p,
+  .option4 a,
+  .option5 p,
+  .option5 a,
+  .option6 p,
+  .option6 a {
+    padding: 1rem 0rem;
+  }
+>>>>>>> 071a2670cd3c667cf7ba69fc730daa2c09c3632a
   .cocktailImgContainer {
     width: 30rem;
     height: 30rem;
@@ -547,9 +634,19 @@ footer p {
     .cocktailImgContainer span {
       font-size: 3rem; }
   .restart {
+<<<<<<< HEAD
     width: 100%; }
   footer p {
     font-size: 1.5rem; } }
+=======
+    width: 100%;
+  }
+  footer p,
+  footer a {
+    font-size: 1.5rem;
+  }
+}
+>>>>>>> 071a2670cd3c667cf7ba69fc730daa2c09c3632a
 
 @media (max-width: 360px) {
   h1 {
@@ -560,9 +657,18 @@ footer p {
   h3 {
     font-size: 1.7rem; }
   body {
+<<<<<<< HEAD
     font-size: 1.5rem; }
   p {
     font-size: 2.5rem; }
+=======
+    font-size: 1.5rem;
+  }
+  p,
+  a {
+    font-size: 2.5rem;
+  }
+>>>>>>> 071a2670cd3c667cf7ba69fc730daa2c09c3632a
   .option1 p,
   .option2 p,
   .option3 p,

@@ -1,3 +1,7 @@
+/******************************/
+/* General Styles             */
+/******************************/
+
 // DEBUGGING style
 // * {border: 1px solid red;}
 
@@ -7,6 +11,7 @@
     margin: 0 auto;
 }
 
+/* Accessibility skip link */
 .skipLink {
     position: absolute;
     left: -1000px;
@@ -20,12 +25,24 @@
     left: 0;
 }
 
+a {
+    text-decoration: none;
+    font-family: $bodyFont;
+    color: $colorWhite;
+    font-size: 3rem;
+
+    &:hover {
+        color: #EA593C;
+    }
+}
+
 html,
 h1,
 h2,
 p,
 ul,
-body {
+body,
+a {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
@@ -55,7 +72,15 @@ button {
     margin-top: 3rem;
 }
 
+<<<<<<< HEAD
 .start{
+=======
+
+
+/* start and restart button styles */
+.start,
+.restart {
+>>>>>>> 071a2670cd3c667cf7ba69fc730daa2c09c3632a
     display: inline-block;
     padding: 2rem 6rem;
     border-radius: 0.3rem;
