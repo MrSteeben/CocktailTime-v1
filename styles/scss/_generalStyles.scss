@@ -77,7 +77,7 @@ button {
 .restart {
     display: inline-block;
     padding: 2rem 6rem;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 500;
@@ -88,7 +88,9 @@ button {
 }
 
 .start:hover,
-.start:focus{
+.start:focus,
+.restart:hover,
+.restart:focus{
     color: $colorBlack;
     background-color: $colorSecondary;
 }
