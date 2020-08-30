@@ -55,8 +55,7 @@ button {
     margin-top: 3rem;
 }
 
-.start,
-.restart {
+.start{
     display: inline-block;
     padding: 2rem 6rem;
     border-radius: 0.3rem;
@@ -70,9 +69,7 @@ button {
 }
 
 .start:hover,
-.start:focus,
-.restart:hover
-.restart:focus {
+.start:focus{
     color: $colorBlack;
     background-color: $colorSecondary;
 }
