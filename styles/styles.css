@@ -378,6 +378,10 @@ header .headerFlex p {
   margin-bottom: 3rem;
 }
 
+header .headerFlex .start {
+  margin-bottom: 5rem;
+}
+
 /******************************/
 /* Main Styles                */
 /******************************/
